@@ -1,5 +1,115 @@
-body {
-  background-color: white;
+.bloc_page {
+  width: 100%;
+  margin: auto;
 }
 
+header {
+  border: 2px red solid;
+  width: 100%;
+  height: 10vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+header .logo {
+  border: 5px green solid;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: auto;
+  height: 6vh;
+}
+
+.section_presentation {
+  border: 5px green solid;
+  width: 100%;
+  height: auto;
+}
+
+.section_presentation_localisation {
+  border: 2px black solid;
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 2rem;
+}
+
+.section_presentation #map {
+  margin: 0.6%;
+}
+
+.section_presentation .btn {
+  font-size: 1.5rem;
+  width: 25%;
+  height: 5vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: none;
+}
+
+.section_presentation_titreh2 {
+  font-size: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-weight: bold;
+  text-align: center;
+  border: 2px red solid;
+}
+
+.section_presentation_description {
+  font-size: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  border: 2px blue solid;
+}
+
+.section_presentation_btn {
+  font-size: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.section_fonctionnement {
+  border: 5px red solid;
+  width: 100%;
+  height: auto;
+}
+
+.section_restaurants {
+  border: 5px blue solid;
+  width: 100%;
+  height: auto;
+}
+
+footer {
+  border: 5px olive solid;
+  width: 100%;
+  height: auto;
+}
 /*# sourceMappingURL=style.css.map */

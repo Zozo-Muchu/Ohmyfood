@@ -1,0 +1,77 @@
+.bloc_page{
+    width:100%;
+    margin:auto;
+}
+header{
+    border: 2px red solid;
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+        .logo{
+            border:5px green solid;
+            display: flex;
+           width: auto;
+           height: 6vh;
+        }
+}
+.section_presentation{
+    border: 5px green solid;
+    width: 100%;
+    height: auto;
+        &_localisation{
+            border:2px black solid;
+            width: 100%;
+            height: auto;
+            display: flex;
+            justify-content: center;
+            font-size: 2rem;
+        }
+        #map{
+            margin:0.6%;
+        }
+        .btn{
+            font-size: 1.5rem;
+            width: 25%;
+            height: 5vh;
+            display: flex;
+            justify-content: center;
+            border: none;
+        }
+        &_titreh2{
+            font-size:2rem;
+            display: flex;
+            justify-content: center;
+            font-weight: bold;
+            text-align: center;
+            border: 2px red solid;
+        }
+        &_description{
+            font-size:1rem;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            border: 2px blue solid;
+        }
+        &_btn{
+            font-size: 1rem;
+            display: flex;
+            justify-content: center;
+        }
+}
+.section_fonctionnement{
+    border: 5px red solid;
+    width: 100%;
+    height: auto;
+}
+.section_restaurants{
+    border: 5px blue solid;
+    width: 100%;
+    height: auto;
+}
+
+footer{
+    border: 5px olive solid;
+    width: 100%;
+    height: auto;
+}
