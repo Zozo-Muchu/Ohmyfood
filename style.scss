@@ -1,5 +1,4 @@
-/*mini format mobile*/
-@media screen and (max-width: 653px){
+
 .bloc_page{
     width:100%;
     margin:auto;
@@ -148,26 +147,65 @@ header{
         }
 
         a{
-            width: auto;
-            height: 30vh;
+            width: 100%;
+            height: auto;
             margin: 6.5%;
             display: block;
             justify-content: center;
             border: 2px red solid;
         }
+        .index2{
+            background-image: url(image/la_palette.jpg);
+            width: auto;
+            height: 30vh;
+            background-size: cover;
+            background-position: center;
+        }
+        .index3{
+            background-image: url(image/la_note.jpg);
+            width: auto;
+            height: 30vh;
+            background-size: cover;
+            background-position: center;
+        }
+        .index4{
+            background-image: url(image/a_la_francaise.jpg);
+            width: auto;
+            height: 30vh;
+            background-size: cover;
+            background-position: center;
+        }
+        .index5{
+            background-image: url(image/le_delice.jpg);
+            width: auto;
+            height: 30vh;
+            background-size: cover;
+            background-position: center;
+        }
 
         h3{
             font-size: 1.1rem;
             position: relative;
-            bottom: -60%;
+            bottom: -75%;
+            background-color: white;
             border: 2px yellow solid;
         }
         
         p{
+            height: 2vh;
             font-size: 0.9rem;
             position: relative;
-            bottom: -55%;
+            bottom: -67%;
+            background-color: white;
             border:2px green solid;
+        }
+        .fa-heart{
+            position: relative;
+            top: -2.1rem;
+            font-size: 1.2rem;
+            margin-right: 3%;
+            display: flex;
+            justify-content: flex-end;
         }
 }
 
@@ -190,16 +228,183 @@ footer{
       
       
 }
+
+
+
+
+/*mini format mobile*/
+@media screen and (max-width: 653px)and (min-width:270px){
+
+    .section_presentation{
+        .input_recherche{
+            font-size: 1rem;
+        }
+        #map{
+            font-size: 1.4rem;
+            padding: 1% 0 1% 0;
+        }
+        h1{
+            font-size: 1.2rem;
+        }
+        h2{
+            font-size: 0.9rem;
+        }
+        .btn{
+            font-size: 0.9rem;
+        }
+    }
+    .section_fonctionnement{
+        h2{
+            font-size: 1.2rem;
+        }
+        li{
+            margin:0;
+        }
+        .li_chiffre{
+            font-size: 1rem;
+            margin-right: 5%;
+            padding: 0.1% 2% 0.1% 2%;
+        }
+        .fa-tablet-alt{
+            margin-right: 5%;
+        }
+
+        .fa-list-ul{
+            margin-right: 5%;
+        }
+
+        .fa-store{
+            margin-right: 5%;
+        }
+
+        p{
+            width: 100%;
+            font-size: 0.9rem;
+        }
+
+    }
+    .section_restaurants{
+        h3{
+            height: 20px;
+            bottom: -69%;
+        }
+        .index2, .index3, .index4, .index5{
+            height: 205px;
+        }
+        p{
+            height: 20px;
+            font-size: 0.9rem;
+            position: relative;
+            bottom: -60%;
+        }
+    }
 }
+
+
+
 
 /*format mobile normal*/
 @media screen and (max-width: 823px) and (min-width: 654px){
+    header{
+        height: auto;
+        .logo{
+       height: 15vh;
+        }
+    }
+    .section_presentation{
+        #map{
+            padding: 1% 0 0.5% 0;
+            font-size: 1.8rem;
+        }
+        .input_recherche{
+          font-size: 1.5rem;
+            width: 30%;
+            height: 10vh;
+        }
+        h1{
+         font-size: 2rem;
+            font-weight: bold;
+        }
+        h2{
+            font-size:1.6rem;
+            font-weight: 100;
+        }
+        .btn{
+            font-size: 1.6rem;
+            width: 50%;
+            margin: auto;
+        }
+    }
+    .section_fonctionnement{
+        h2{
+            font-size: 2rem;
+        }
+        li{
+           margin:0;
+        }
+        .li_chiffre{
+            margin-right: 11%;
+            font-size: 1.6rem;
+            padding:0.1% 1.1% 0.1% 1.1%;
+        }
 
+        .fa-tablet-alt{
+            font-size: 1.6rem;
+            margin-right: 11%;
+        }
+
+        .fa-list-ul{
+            font-size: 1.6rem;
+            margin-right: 11%;
+        }
+
+        .fa-store{
+            font-size: 1.6rem;
+            margin-right: 11%;
+        }
+
+        p{
+            width: 100%;
+            font-size: 1.6rem;
+        }
+    }
+    .section_restaurants{
+        h2{
+            font-size: 2rem;
+        }
+        .index2, .index3, .index4, .index5{
+            height: 60vh;
+        }
+        h3{
+            font-size: 1.4rem;
+            position: relative;
+            bottom: -62%;
+            background-color: white;
+            border: 2px yellow solid;
+        }
+        p{
+            height: 8vh;
+            font-size: 1.2rem;
+            position: relative;
+            bottom: -51%;
+            background-color: white;
+            border:2px green solid;
+        }
+        .fa-heart{
+            position: relative;
+            top: -2.1rem;
+            font-size: 1.2rem;
+            margin-right: 3%;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+    }
 }
-
 /*format tablette */
 @media screen and (max-width: 1200px) and (min-width: 824px){
 
+    
 }
 
 /*format desktop*/
