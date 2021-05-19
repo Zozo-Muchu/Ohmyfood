@@ -4,7 +4,7 @@
   "description": "\"\"",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "prefix": "postcss ./style.css --use autoprefixer -d ./prefixed/"
   },
   "repository": {
     "type": "git",
@@ -12,8 +12,6 @@
   },
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Zozo-Muchu/Ohmyfood/issues"
-  },
-  "homepage": "https://github.com/Zozo-Muchu/Ohmyfood#readme"
+  "browserslist": "last 4 versions"
 }
+ 

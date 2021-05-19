@@ -1,115 +1,237 @@
-.bloc_page {
-  width: 100%;
-  margin: auto;
+/*mini format mobile*/
+@media screen and (max-width: 653px) {
+  .bloc_page {
+    width: 100%;
+    margin: auto;
+    font-family: roboto;
+  }
+  .bloc_page a {
+    text-decoration: none;
+  }
+  .bloc_page li {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: left;
+        -ms-flex-pack: left;
+            justify-content: left;
+    margin-left: -9%;
+    border: 2px red solid;
+  }
+  header {
+    border: 2px red solid;
+    width: 100%;
+    height: 10vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  header .logo {
+    border: 5px green solid;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: auto;
+    height: 6vh;
+  }
+  .section_presentation {
+    border: 5px green solid;
+    width: 100%;
+    height: auto;
+  }
+  .section_presentation .localisation {
+    border: 2px black solid;
+    width: 100%;
+    height: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    font-size: 2rem;
+  }
+  .section_presentation #map {
+    margin-right: 1%;
+    padding-top: 1%;
+    font-size: 1.6rem;
+    border: 2px red solid;
+  }
+  .section_presentation .input_recherche {
+    font-size: 1.1rem;
+    width: 55%;
+    height: 5vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    border: 2px blue solid;
+  }
+  .section_presentation h1 {
+    font-size: 1.5rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    font-weight: bold;
+    text-align: center;
+    border: 2px red solid;
+  }
+  .section_presentation h2 {
+    font-size: 0.9rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    text-align: center;
+    border: 2px blue solid;
+  }
+  .section_presentation .btn {
+    width: auto;
+    height: auto;
+    font-size: 0.9rem;
+    padding: 2%;
+    margin: 5% 12% 8% 12%;
+    border-radius: 2.5rem 2.5rem 2.5rem 2.5rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    border: 2px red solid;
+  }
+  .section_fonctionnement {
+    border: 5px red solid;
+    width: 100%;
+    height: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .section_fonctionnement h2 {
+    width: calc(100%-10%);
+    height: auto;
+    margin: 5%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: left;
+        -ms-flex-pack: left;
+            justify-content: left;
+    font-size: 1.5rem;
+    border: 2px blue solid;
+  }
+  .section_fonctionnement ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    border: 2px green solid;
+  }
+  .section_fonctionnement .li_chiffre {
+    margin-right: 4%;
+    padding: 0.5% 1.7% 0.5% 1.7%;
+    border-radius: 100%;
+    border: 2px red solid;
+  }
+  .section_fonctionnement .fa-tablet-alt {
+    margin-right: 4%;
+    border: 2px green solid;
+  }
+  .section_fonctionnement .fa-list-ul {
+    margin-right: 4%;
+    border: 2px green solid;
+  }
+  .section_fonctionnement .fa-store {
+    margin-right: 4%;
+    border: 2px green solid;
+  }
+  .section_fonctionnement p {
+    width: 100%;
+    font-size: 0.8rem;
+    border: 2px blue solid;
+  }
+  .section_restaurants {
+    border: 5px blue solid;
+    width: 100%;
+    height: auto;
+  }
+  .section_restaurants h2 {
+    width: calc(100%-10%);
+    height: auto;
+    margin: 5%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: left;
+        -ms-flex-pack: left;
+            justify-content: left;
+    font-size: 1.5rem;
+    border: 2px blue solid;
+  }
+  .section_restaurants a {
+    width: auto;
+    height: 30vh;
+    margin: 6.5%;
+    display: block;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    border: 2px red solid;
+  }
+  .section_restaurants h3 {
+    font-size: 1.1rem;
+    position: relative;
+    bottom: -60%;
+    border: 2px yellow solid;
+  }
+  .section_restaurants p {
+    font-size: 0.9rem;
+    position: relative;
+    bottom: -55%;
+    border: 2px green solid;
+  }
+  footer {
+    border: 5px olive solid;
+    width: 100%;
+    height: auto;
+    margin-top: 10%;
+  }
+  footer .logo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: auto;
+    height: 1.5rem;
+    margin-left: 5%;
+    border: 2px green solid;
+  }
+  footer ul {
+    list-style-type: none;
+  }
 }
 
-header {
-  border: 2px red solid;
-  width: 100%;
-  height: 10vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-header .logo {
-  border: 5px green solid;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: auto;
-  height: 6vh;
-}
-
-.section_presentation {
-  border: 5px green solid;
-  width: 100%;
-  height: auto;
-}
-
-.section_presentation_localisation {
-  border: 2px black solid;
-  width: 100%;
-  height: auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  font-size: 2rem;
-}
-
-.section_presentation #map {
-  margin: 0.6%;
-}
-
-.section_presentation .btn {
-  font-size: 1.5rem;
-  width: 25%;
-  height: 5vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  border: none;
-}
-
-.section_presentation_titreh2 {
-  font-size: 2rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  font-weight: bold;
-  text-align: center;
-  border: 2px red solid;
-}
-
-.section_presentation_description {
-  font-size: 1rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  text-align: center;
-  border: 2px blue solid;
-}
-
-.section_presentation_btn {
-  font-size: 1rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.section_fonctionnement {
-  border: 5px red solid;
-  width: 100%;
-  height: auto;
-}
-
-.section_restaurants {
-  border: 5px blue solid;
-  width: 100%;
-  height: auto;
-}
-
-footer {
-  border: 5px olive solid;
-  width: 100%;
-  height: auto;
-}
+/*format mobile normal*/
+/*format tablette */
+/*format desktop*/
 /*# sourceMappingURL=style.css.map */
