@@ -2,10 +2,12 @@
   width: 100%;
   margin: auto;
   font-family: roboto;
+  color: black;
 }
 
 .bloc_page a {
   text-decoration: none;
+  color: black;
 }
 
 .bloc_page li {
@@ -16,13 +18,11 @@
       -ms-flex-pack: left;
           justify-content: left;
   margin-left: -9%;
-  border: 2px red solid;
 }
 
 header {
-  border: 2px red solid;
   width: 100%;
-  height: 10vh;
+  height: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -32,22 +32,20 @@ header {
 }
 
 header .logo {
-  border: 5px green solid;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   width: auto;
-  height: 6vh;
+  height: 40px;
+  padding: 2% 0 5% 0;
 }
 
 .section_presentation {
-  border: 5px green solid;
   width: 100%;
   height: auto;
 }
 
 .section_presentation .localisation {
-  border: 2px black solid;
   width: 100%;
   height: auto;
   display: -webkit-box;
@@ -63,20 +61,18 @@ header .logo {
   margin-right: 1%;
   padding-top: 1%;
   font-size: 1.6rem;
-  border: 2px red solid;
 }
 
 .section_presentation .input_recherche {
   font-size: 1.1rem;
   width: 55%;
-  height: 5vh;
+  height: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  border: 2px blue solid;
 }
 
 .section_presentation h1 {
@@ -89,7 +85,6 @@ header .logo {
           justify-content: center;
   font-weight: bold;
   text-align: center;
-  border: 2px red solid;
 }
 
 .section_presentation h2 {
@@ -101,7 +96,6 @@ header .logo {
       -ms-flex-pack: center;
           justify-content: center;
   text-align: center;
-  border: 2px blue solid;
 }
 
 .section_presentation .btn {
@@ -109,7 +103,7 @@ header .logo {
   height: auto;
   font-size: 0.9rem;
   padding: 2%;
-  margin: 5% 12% 8% 12%;
+  margin: 5% 22% 8% 22%;
   border-radius: 2.5rem 2.5rem 2.5rem 2.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -121,7 +115,6 @@ header .logo {
 }
 
 .section_fonctionnement {
-  border: 5px red solid;
   width: 100%;
   height: auto;
   display: -webkit-box;
@@ -144,7 +137,6 @@ header .logo {
       -ms-flex-pack: left;
           justify-content: left;
   font-size: 1.5rem;
-  border: 2px blue solid;
 }
 
 .section_fonctionnement ul {
@@ -155,39 +147,32 @@ header .logo {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  border: 2px green solid;
 }
 
 .section_fonctionnement .li_chiffre {
   margin-right: 4%;
   padding: 0.5% 1.7% 0.5% 1.7%;
   border-radius: 100%;
-  border: 2px red solid;
 }
 
 .section_fonctionnement .fa-tablet-alt {
   margin-right: 4%;
-  border: 2px green solid;
 }
 
 .section_fonctionnement .fa-list-ul {
   margin-right: 4%;
-  border: 2px green solid;
 }
 
 .section_fonctionnement .fa-store {
   margin-right: 4%;
-  border: 2px green solid;
 }
 
 .section_fonctionnement p {
   width: 100%;
   font-size: 0.8rem;
-  border: 2px blue solid;
 }
 
 .section_restaurants {
-  border: 5px blue solid;
   width: 100%;
   height: auto;
 }
@@ -203,7 +188,6 @@ header .logo {
       -ms-flex-pack: left;
           justify-content: left;
   font-size: 1.5rem;
-  border: 2px blue solid;
 }
 
 .section_restaurants a {
@@ -214,39 +198,30 @@ header .logo {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  border: 2px red solid;
+}
+
+.section_restaurants .index2, .section_restaurants .index3, .section_restaurants .index4, .section_restaurants .index5 {
+  width: auto;
+  height: 30vh;
+  background-size: cover;
+  background-position: center;
+  border: 1px red solid;
 }
 
 .section_restaurants .index2 {
   background-image: url(image/la_palette.jpg);
-  width: auto;
-  height: 30vh;
-  background-size: cover;
-  background-position: center;
 }
 
 .section_restaurants .index3 {
   background-image: url(image/la_note.jpg);
-  width: auto;
-  height: 30vh;
-  background-size: cover;
-  background-position: center;
 }
 
 .section_restaurants .index4 {
   background-image: url(image/a_la_francaise.jpg);
-  width: auto;
-  height: 30vh;
-  background-size: cover;
-  background-position: center;
 }
 
 .section_restaurants .index5 {
   background-image: url(image/le_delice.jpg);
-  width: auto;
-  height: 30vh;
-  background-size: cover;
-  background-position: center;
 }
 
 .section_restaurants h3 {
@@ -254,7 +229,6 @@ header .logo {
   position: relative;
   bottom: -75%;
   background-color: white;
-  border: 2px yellow solid;
 }
 
 .section_restaurants p {
@@ -263,7 +237,6 @@ header .logo {
   position: relative;
   bottom: -67%;
   background-color: white;
-  border: 2px green solid;
 }
 
 .section_restaurants .fa-heart {
@@ -280,7 +253,6 @@ header .logo {
 }
 
 footer {
-  border: 5px olive solid;
   width: 100%;
   height: auto;
   margin-top: 10%;
@@ -296,15 +268,65 @@ footer .logo {
   width: auto;
   height: 1.5rem;
   margin-left: 5%;
-  border: 2px green solid;
 }
 
 footer ul {
   list-style-type: none;
+  margin-left: 3%;
 }
 
-/*mini format mobile*/
-@media screen and (max-width: 653px) and (min-width: 270px) {
+footer li {
+  margin: 1%;
+}
+
+/*XS format mobile*/
+@media screen and (max-width: 280px) {
+  header .logo {
+    height: 30px;
+  }
+  .section_presentation .input_recherche {
+    width: 40%;
+    font-size: 0.9rem;
+  }
+  .section_presentation #map {
+    font-size: 1.1rem;
+    padding: 1% 0 1% 0;
+  }
+  .section_presentation h1 {
+    font-size: 1.1rem;
+  }
+  .section_presentation h2 {
+    font-size: 0.9rem;
+  }
+  .section_presentation .btn {
+    height: auto;
+    width: 60%;
+    margin: auto;
+  }
+  .section_fonctionnement h2 {
+    font-size: 1rem;
+  }
+  .section_restaurants h2 {
+    font-size: 1rem;
+  }
+  .section_restaurants h3 {
+    font-size: 0.9rem;
+    bottom: -78%;
+  }
+  .section_restaurants p {
+    font-size: 0.8rem;
+    bottom: -70%;
+  }
+  footer .logo {
+    height: 20px;
+  }
+  footer ul {
+    font-size: 0.9rem;
+  }
+}
+
+/*S format mobile*/
+@media screen and (max-width: 653px) and (min-width: 281px) {
   .section_presentation .input_recherche {
     font-size: 1rem;
   }
@@ -319,7 +341,7 @@ footer ul {
     font-size: 0.9rem;
   }
   .section_presentation .btn {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
   }
   .section_fonctionnement h2 {
     font-size: 1.2rem;
@@ -347,7 +369,7 @@ footer ul {
   }
   .section_restaurants h3 {
     height: 20px;
-    bottom: -69%;
+    bottom: -73%;
   }
   .section_restaurants .index2, .section_restaurants .index3, .section_restaurants .index4, .section_restaurants .index5 {
     height: 205px;
@@ -356,17 +378,20 @@ footer ul {
     height: 20px;
     font-size: 0.9rem;
     position: relative;
-    bottom: -60%;
+    bottom: -64%;
+  }
+  .section_restaurants .fa-heart {
+    font-size: 1.6rem;
   }
 }
 
-/*format mobile normal*/
+/* M format mobile*/
 @media screen and (max-width: 823px) and (min-width: 654px) {
   header {
     height: auto;
   }
   header .logo {
-    height: 15vh;
+    height: 50px;
   }
   .section_presentation #map {
     padding: 1% 0 0.5% 0;
@@ -375,7 +400,6 @@ footer ul {
   .section_presentation .input_recherche {
     font-size: 1.5rem;
     width: 30%;
-    height: 10vh;
   }
   .section_presentation h1 {
     font-size: 2rem;
@@ -399,7 +423,7 @@ footer ul {
   .section_fonctionnement .li_chiffre {
     margin-right: 11%;
     font-size: 1.6rem;
-    padding: 0.1% 1.1% 0.1% 1.1%;
+    padding: 0.1% 1.4% 0.1% 1.4%;
   }
   .section_fonctionnement .fa-tablet-alt {
     font-size: 1.6rem;
@@ -421,27 +445,26 @@ footer ul {
     font-size: 2rem;
   }
   .section_restaurants .index2, .section_restaurants .index3, .section_restaurants .index4, .section_restaurants .index5 {
-    height: 60vh;
+    height: 245px;
   }
   .section_restaurants h3 {
+    height: 28px;
     font-size: 1.4rem;
     position: relative;
-    bottom: -62%;
+    bottom: -71%;
     background-color: white;
-    border: 2px yellow solid;
   }
   .section_restaurants p {
-    height: 8vh;
+    height: 25px;
     font-size: 1.2rem;
     position: relative;
-    bottom: -51%;
+    bottom: -61%;
     background-color: white;
-    border: 2px green solid;
   }
   .section_restaurants .fa-heart {
     position: relative;
     top: -2.1rem;
-    font-size: 1.2rem;
+    font-size: 1.8rem;
     margin-right: 3%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -450,8 +473,196 @@ footer ul {
         -ms-flex-pack: end;
             justify-content: flex-end;
   }
+  footer .logo {
+    height: 35px;
+  }
+  footer ul {
+    font-size: 1.2rem;
+    margin-left: 6%;
+  }
 }
 
 /*format tablette */
+@media screen and (max-width: 1200px) and (min-width: 824px) {
+  header {
+    height: auto;
+  }
+  header .logo {
+    height: 60px;
+  }
+  .section_presentation #map {
+    font-size: 2.5rem;
+    padding: 0.5% 0 0.5% 0;
+  }
+  .section_presentation .input_recherche {
+    width: 30%;
+    font-size: 2.1rem;
+  }
+  .section_presentation h1 {
+    font-size: 1.9rem;
+  }
+  .section_presentation h2 {
+    font-size: 1.5rem;
+  }
+  .section_presentation .btn {
+    font-size: 1.5rem;
+    width: 30%;
+    margin: auto;
+  }
+  .section_fonctionnement h2 {
+    font-size: 1.9rem;
+  }
+  .section_fonctionnement ul {
+    margin-left: 15%;
+  }
+  .section_fonctionnement .li_chiffre {
+    font-size: 1.3rem;
+    padding: 0.1% 1% 0.5% 1%;
+  }
+  .section_fonctionnement .fa-tablet-alt {
+    font-size: 1.3rem;
+  }
+  .section_fonctionnement .fa-list-ul {
+    font-size: 1.3rem;
+  }
+  .section_fonctionnement .fa-store {
+    font-size: 1.3rem;
+  }
+  .section_fonctionnement p {
+    font-size: 1.3rem;
+  }
+  .section_restaurants h2 {
+    font-size: 1.9rem;
+  }
+  .section_restaurants .block_restaurants {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    border: 2px olive solid;
+  }
+  .section_restaurants .index2, .section_restaurants .index3, .section_restaurants .index4, .section_restaurants .index5 {
+    width: 45%;
+    height: 300px;
+    margin: auto;
+    margin-top: 2%;
+    margin-bottom: 2%;
+  }
+  .section_restaurants h3 {
+    font-size: 1.3rem;
+    height: 25px;
+    bottom: -78%;
+  }
+  .section_restaurants p {
+    font-size: 1.2rem;
+    height: 22px;
+    bottom: -71%;
+  }
+  .section_restaurants .fa-heart {
+    font-size: 1.8rem;
+  }
+  footer .logo {
+    height: 45px;
+  }
+  footer ul {
+    margin-left: 10%;
+  }
+  footer li {
+    font-size: 1.2rem;
+  }
+}
+
 /*format desktop*/
+@media screen and (min-width: 1025px) {
+  .bloc_page {
+    width: 100%;
+    max-width: 980px;
+    height: auto;
+  }
+  header {
+    width: 100%;
+    height: auto;
+  }
+  header .logo {
+    height: 60px;
+  }
+  .section_presentation #map {
+    font-size: 2.4rem;
+    padding: 1% 0 1% 0;
+  }
+  .section_presentation .input_recherche {
+    font-size: 2.2rem;
+    width: 30%;
+  }
+  .section_presentation h1 {
+    font-size: 2.5rem;
+  }
+  .section_presentation h2 {
+    font-size: 2rem;
+  }
+  .section_presentation .btn {
+    font-size: 2rem;
+    width: 40%;
+    margin: auto;
+  }
+  .section_fonctionnement h2 {
+    font-size: 2rem;
+  }
+  .section_fonctionnement ul {
+    margin-left: 10%;
+  }
+  .section_fonctionnement .li_chiffre {
+    padding: 0.5% 1.7% 0.5% 1.7%;
+    font-size: 1.8rem;
+  }
+  .section_fonctionnement .fa-tablet-alt {
+    font-size: 1.8rem;
+  }
+  .section_fonctionnement .fa-list-ul {
+    font-size: 1.8rem;
+  }
+  .section_fonctionnement .fa-store {
+    font-size: 1.8rem;
+  }
+  .section_fonctionnement p {
+    font-size: 1.8rem;
+  }
+  .section_restaurants h2 {
+    font-size: 2rem;
+  }
+  .section_restaurants .block_restaurants {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .section_restaurants .index2, .section_restaurants .index3, .section_restaurants .index4, .section_restaurants .index5 {
+    width: 45%;
+    height: 300px;
+    margin: auto;
+    margin-top: 2%;
+    margin-bottom: 2%;
+  }
+  .section_restaurants h3 {
+    font-size: 1.5rem;
+    height: 28px;
+    bottom: -72%;
+  }
+  .section_restaurants p {
+    font-size: 1.4rem;
+    height: 33px;
+    bottom: -64%;
+  }
+  footer .logo {
+    height: 45px;
+  }
+  footer ul {
+    margin-left: 10%;
+  }
+  footer li {
+    font-size: 1.6rem;
+  }
+}
 /*# sourceMappingURL=style.css.map */
