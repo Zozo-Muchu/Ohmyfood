@@ -2,12 +2,17 @@
 $primaire: #9356DC;
 $secondaire: #FF79DA;
 $tertiaire: #99E2D0;
-$quaterniare:
+$quaternaire:#F2F2F2;
+$cinquième:#DCDCDC;
+$sixième:#0F0D0A;
+
+
 .bloc_page{
     width:100%;
     margin:auto;
     font-family: roboto;
     color: black;
+    cursor:default;
         a{
             text-decoration: none;
             color: black;
@@ -33,24 +38,29 @@ header{
 .section_presentation{
     width: 100%;
     height: auto;
+    background-color: $quaternaire;
+    padding-bottom: 3%;
         .localisation{
             width: 100%;
             height: auto;
             display: flex;
             justify-content: center;
             font-size: 2rem;
+            background-color: $cinquième;
         }
         #map{
-            margin-right:1%;
+            margin-right:3%;
             padding-top: 1%;
             font-size: 1.6rem;
         }
         .input_recherche{
             font-size: 1.1rem;
-            width: 55%;
+            width: 36%;
             height: auto;
             display: flex;
             justify-content: center;
+            background-color: $cinquième;
+            border:none;
         }
         h1{
             font-size:1.5rem;
@@ -61,6 +71,7 @@ header{
         }
         h2{
             font-size:0.9rem;
+            font-weight: 100;
             display: flex;
             justify-content: center;
             text-align: center;
@@ -74,7 +85,8 @@ header{
             border-radius: 2.5rem 2.5rem 2.5rem 2.5rem;
             display: flex;
             justify-content: center;
-            border:2px red solid;
+            cursor: pointer;
+            background: linear-gradient(to bottom right, $secondaire,$primaire);
         }
 }
 .section_fonctionnement{
@@ -93,11 +105,20 @@ header{
         ul{
             display: flex;
             flex-direction: column;
+            margin-left: -5%;
+        }
+        li{
+            background-color: $quaternaire;
+            border-radius: 20px;
+            margin-top: 3%;
         }
         .li_chiffre{
             margin-right: 4%;
+            margin-left: 4%;
             padding:0.5% 1.7% 0.5% 1.7%;
-            border-radius: 100%;           
+            border-radius: 100%; 
+            background-color: $primaire;
+            color:white;         
         }
         .fa-tablet-alt{
             margin-right: 4%;
@@ -116,6 +137,8 @@ header{
 .section_restaurants{
     width: 100%;
     height: auto;
+    padding-bottom: 10%;
+    background-color: $quaternaire;
 
         h2{
             width: calc(100%-10%);
@@ -137,7 +160,6 @@ header{
             height: 30vh;
             background-size: cover;
             background-position: center;
-            border: 1px red solid;
         }
         .index2{
             background-image: url(image/la_palette.jpg);
@@ -158,7 +180,6 @@ header{
             bottom: -75%;
             background-color: white;
         }
-        
         p{
             height: 2vh;
             font-size: 0.9rem;
@@ -166,7 +187,9 @@ header{
             bottom: -67%;
             background-color: white;
         }
-        .fa-heart{
+        .coeur_plein{
+            visibility: visible;
+            color:red;
             position: relative;
             top: -2.1rem;
             font-size: 1.2rem;
@@ -174,12 +197,23 @@ header{
             display: flex;
             justify-content: flex-end;
         }
+        .coeur_vide{
+            color:black;
+            position: relative;
+            top: -2.1rem;
+            font-size: 1.2rem;
+            margin-right: 3%;
+            display: flex;
+            justify-content: flex-end;
+             &:hover{
+                visibility: hidden;
+            }
+        }
 }
 
 footer{
     width: 100%;
     height: auto;
-    margin-top: 10%;
 
         .logo{
             display: flex;
@@ -240,11 +274,14 @@ footer{
         }
         h3{
            font-size: 0.9rem;
-           bottom: -78%;
+           bottom: -84%;
         }
         p{
             font-size: 0.8rem;
-            bottom: -70%;
+            bottom: -77%;
+        }
+        .coeur_vide, .coeur_plein{
+            top: -1.7rem;
         }
     }
     footer{
@@ -285,7 +322,8 @@ footer{
             font-size: 1.2rem;
         }
         li{
-            margin:0;
+            margin: 3% 0 0 5%;
+            width: 65vw;
         }
         .li_chiffre{
             font-size: 1rem;
@@ -312,8 +350,8 @@ footer{
     }
     .section_restaurants{
         h3{
-            height: 20px;
-            bottom: -73%;
+            height: 22px;
+            bottom: -81%;
         }
         .index2, .index3, .index4, .index5{
             height: 205px;
@@ -322,10 +360,11 @@ footer{
             height: 20px;
             font-size: 0.9rem;
             position: relative;
-            bottom: -64%;
+            bottom: -72%;
         }
-        .fa-heart{
+        .coeur_vide, .coeur_plein{
             font-size: 1.6rem;
+            top:-1.8rem;
         }
     }
 }
@@ -408,17 +447,17 @@ footer{
             height: 28px;
             font-size: 1.4rem;
             position: relative;
-            bottom: -71%;
+            bottom: -80%;
             background-color: white;
         }
         p{
             height: 25px;
             font-size: 1.2rem;
             position: relative;
-            bottom: -61%;
+            bottom: -70%;
             background-color: white;
         }
-        .fa-heart{
+        .coeur_vide, .coeur_plein{
             position: relative;
             top: -2.1rem;
             font-size: 1.8rem;
@@ -526,7 +565,7 @@ footer{
             height: 22px;
             bottom: -71%;
         }
-        .fa-heart{
+        .coeur_vide, .coeur_plein{
             font-size: 1.8rem;
         }
     }
@@ -630,6 +669,10 @@ footer{
             font-size: 1.4rem;
             height: 33px;
             bottom: -64%;
+        }
+        .coeur_vide, .coeur_plein{
+            font-size: 1.7rem;
+            top: -2.3rem;
         }
     }
     footer{
