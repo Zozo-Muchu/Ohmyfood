@@ -2,13 +2,13 @@
   width: 100%;
   margin: auto;
   font-family: roboto;
-  color: black;
+  color: #0F0D0A;
   cursor: default;
 }
 
 .bloc_page a {
   text-decoration: none;
-  color: black;
+  color: #0F0D0A;
 }
 
 .bloc_page li {
@@ -39,6 +39,12 @@ header .logo {
   width: auto;
   height: 40px;
   padding: 2% 0 5% 0;
+}
+
+header .header_return {
+  color: #0F0D0A;
+  font-size: 2rem;
+  padding-top: 7%;
 }
 
 .section_presentation {
@@ -119,12 +125,13 @@ header .logo {
       -ms-flex-pack: center;
           justify-content: center;
   cursor: pointer;
+  color: #F2F2F2;
   background: -webkit-gradient(linear, left top, right bottom, from(#FF79DA), to(#9356DC));
   background: linear-gradient(to bottom right, #FF79DA, #9356DC);
 }
 
 .section_fonctionnement {
-  width: 100%;
+  width: calc 94%;
   height: auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -133,6 +140,7 @@ header .logo {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  padding: 3%;
 }
 
 .section_fonctionnement h2 {
@@ -156,22 +164,24 @@ header .logo {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin-left: -5%;
+  margin: auto;
 }
 
 .section_fonctionnement li {
   background-color: #F2F2F2;
   border-radius: 20px;
   margin-top: 3%;
+  width: 65vw;
 }
 
 .section_fonctionnement .li_chiffre {
   margin-right: 4%;
-  margin-left: 4%;
   padding: 0.5% 1.7% 0.5% 1.7%;
   border-radius: 100%;
   background-color: #9356DC;
   color: white;
+  position: relative;
+  left: -2%;
 }
 
 .section_fonctionnement .fa-tablet-alt {
@@ -201,6 +211,7 @@ header .logo {
 .section_restaurants h2 {
   width: calc(100%-10%);
   height: auto;
+  padding-top: 2%;
   margin: 5%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -226,6 +237,7 @@ header .logo {
   height: 30vh;
   background-size: cover;
   background-position: center;
+  border-radius: 15px;
 }
 
 .section_restaurants .index2 {
@@ -248,20 +260,40 @@ header .logo {
   font-size: 1.1rem;
   position: relative;
   bottom: -75%;
+  padding-left: 2%;
   background-color: white;
 }
 
 .section_restaurants p {
   height: 2vh;
   font-size: 0.9rem;
+  padding-left: 2%;
   position: relative;
   bottom: -67%;
   background-color: white;
+  border-radius: 0 0 15px 15px;
+}
+
+.section_restaurants .nouveau {
+  color: #217460;
+  background-color: #99E2D0;
+  width: 11vw;
+  height: auto;
+  padding: 1%;
+  font-weight: bold;
+  position: relative;
+  left: 28rem;
+  top: -3.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .section_restaurants .coeur_plein {
   visibility: visible;
-  color: red;
   position: relative;
   top: -2.1rem;
   font-size: 1.2rem;
@@ -272,10 +304,27 @@ header .logo {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+  color: grey;
+  -webkit-transform: scaleY(0.1);
+          transform: scaleY(0.1);
+}
+
+.section_restaurants .coeur_plein:hover {
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#FF79DA), to(#9356DC));
+  background-image: linear-gradient(to top, #FF79DA, #9356DC);
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-transform: scaleY(1);
+          transform: scaleY(1);
+  -webkit-transition: -webkit-transform 2000ms;
+  transition: -webkit-transform 2000ms;
+  transition: transform 2000ms;
+  transition: transform 2000ms, -webkit-transform 2000ms;
 }
 
 .section_restaurants .coeur_vide {
-  color: black;
+  color: #0F0D0A;
   position: relative;
   top: -2.1rem;
   font-size: 1.2rem;
@@ -295,18 +344,14 @@ header .logo {
 footer {
   width: 100%;
   height: auto;
+  background-color: #0F0D0A;
+  padding: 0.3% 0 3% 0;
 }
 
-footer .logo {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  width: auto;
-  height: 1.5rem;
-  margin-left: 5%;
+footer h2 {
+  font-family: Shrikhand;
+  color: white;
+  margin-left: 8%;
 }
 
 footer ul {
@@ -316,6 +361,10 @@ footer ul {
 
 footer li {
   margin: 1%;
+}
+
+footer .puce_footer {
+  color: white;
 }
 
 /*XS format mobile*/
@@ -339,11 +388,17 @@ footer li {
   }
   .section_presentation .btn {
     height: auto;
-    width: 60%;
+    width: auto;
     margin: auto;
   }
   .section_fonctionnement h2 {
     font-size: 1rem;
+  }
+  .section_fonctionnement li {
+    width: 92%;
+  }
+  .section_fonctionnement p {
+    font-size: 0.8rem;
   }
   .section_restaurants h2 {
     font-size: 1rem;
@@ -356,11 +411,19 @@ footer li {
     font-size: 0.8rem;
     bottom: -77%;
   }
+  .section_restaurants .nouveau {
+    width: 23vw;
+    height: auto;
+    padding: 1%;
+    left: 9rem;
+    top: -2.5rem;
+    font-size: 0.8rem;
+  }
   .section_restaurants .coeur_vide, .section_restaurants .coeur_plein {
     top: -1.7rem;
   }
-  footer .logo {
-    height: 20px;
+  footer h2 {
+    font-size: 1rem;
   }
   footer ul {
     font-size: 0.9rem;
@@ -390,7 +453,7 @@ footer li {
   }
   .section_fonctionnement li {
     margin: 3% 0 0 5%;
-    width: 65vw;
+    border-radius: 10px;
   }
   .section_fonctionnement .li_chiffre {
     font-size: 1rem;
@@ -408,7 +471,7 @@ footer li {
   }
   .section_fonctionnement p {
     width: 100%;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
   }
   .section_restaurants h3 {
     height: 22px;
@@ -423,9 +486,24 @@ footer li {
     position: relative;
     bottom: -72%;
   }
+  .section_restaurants .nouveau {
+    width: 17vw;
+    height: auto;
+    padding: 1%;
+    left: 75%;
+    top: -3.5rem;
+    font-size: 1rem;
+  }
   .section_restaurants .coeur_vide, .section_restaurants .coeur_plein {
     font-size: 1.6rem;
     top: -1.8rem;
+  }
+  footer h2 {
+    font-size: 1.1rem;
+  }
+  footer .puce_footer {
+    font-size: 0.9rem;
+    margin-left: 5%;
   }
 }
 
@@ -462,7 +540,7 @@ footer li {
     font-size: 2rem;
   }
   .section_fonctionnement li {
-    margin: 0;
+    margin: 1%;
   }
   .section_fonctionnement .li_chiffre {
     margin-right: 11%;
@@ -496,14 +574,20 @@ footer li {
     font-size: 1.4rem;
     position: relative;
     bottom: -80%;
-    background-color: white;
   }
   .section_restaurants p {
     height: 25px;
     font-size: 1.2rem;
     position: relative;
     bottom: -70%;
-    background-color: white;
+  }
+  .section_restaurants .nouveau {
+    width: 12vw;
+    height: auto;
+    padding: 1%;
+    left: 80%;
+    top: -4.5rem;
+    font-size: 1.1rem;
   }
   .section_restaurants .coeur_vide, .section_restaurants .coeur_plein {
     position: relative;
@@ -517,10 +601,10 @@ footer li {
         -ms-flex-pack: end;
             justify-content: flex-end;
   }
-  footer .logo {
-    height: 35px;
+  footer h2 {
+    font-size: 1.4rem;
   }
-  footer ul {
+  footer .puce_footer {
     font-size: 1.2rem;
     margin-left: 6%;
   }
@@ -550,7 +634,7 @@ footer li {
   }
   .section_presentation .btn {
     font-size: 1.5rem;
-    width: 30%;
+    width: 35%;
     margin: auto;
   }
   .section_fonctionnement h2 {
@@ -584,7 +668,6 @@ footer li {
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    border: 2px olive solid;
   }
   .section_restaurants .index2, .section_restaurants .index3, .section_restaurants .index4, .section_restaurants .index5 {
     width: 45%;
@@ -603,17 +686,25 @@ footer li {
     height: 22px;
     bottom: -71%;
   }
+  .section_restaurants .nouveau {
+    width: 11vw;
+    height: auto;
+    padding: 1%;
+    left: 70%;
+    top: -4.5rem;
+    font-size: 1rem;
+  }
   .section_restaurants .coeur_vide, .section_restaurants .coeur_plein {
     font-size: 1.8rem;
   }
-  footer .logo {
-    height: 45px;
+  footer h2 {
+    font-size: 1.7rem;
   }
   footer ul {
     margin-left: 10%;
   }
-  footer li {
-    font-size: 1.2rem;
+  footer .puce_footer {
+    font-size: 1.4rem;
   }
 }
 
@@ -652,9 +743,6 @@ footer li {
   }
   .section_fonctionnement h2 {
     font-size: 2rem;
-  }
-  .section_fonctionnement ul {
-    margin-left: 10%;
   }
   .section_fonctionnement .li_chiffre {
     padding: 0.5% 1.7% 0.5% 1.7%;
@@ -699,18 +787,26 @@ footer li {
     height: 33px;
     bottom: -64%;
   }
+  .section_restaurants .nouveau {
+    width: 8vw;
+    height: auto;
+    padding: 1%;
+    left: 65%;
+    top: -6.5rem;
+    font-size: 1.2rem;
+  }
   .section_restaurants .coeur_vide, .section_restaurants .coeur_plein {
     font-size: 1.7rem;
     top: -2.3rem;
   }
-  footer .logo {
-    height: 45px;
+  footer h2 {
+    font-size: 2rem;
   }
   footer ul {
     margin-left: 10%;
   }
   footer li {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
   }
 }
 /*# sourceMappingURL=style.css.map */
