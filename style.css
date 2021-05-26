@@ -29,6 +29,7 @@
           justify-content: left;
 }
 
+/* acceuil*/
 header {
   width: 100%;
   height: auto;
@@ -369,6 +370,8 @@ header .header_return {
 
 .section_restaurants .coeur > .coeur_plein {
   display: none;
+  -webkit-transform: scale(0);
+          transform: scale(0);
 }
 
 .section_restaurants .coeur:hover .coeur_plein {
@@ -378,6 +381,16 @@ header .header_return {
   color: transparent;
   -webkit-background-clip: text;
   background-clip: text;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transform-origin: bottom;
+          transform-origin: bottom;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+  -webkit-transition-duration: 2000ms;
+          transition-duration: 2000ms;
 }
 
 .section_restaurants .coeur:hover .coeur_vide {
@@ -608,5 +621,104 @@ footer .puce_footer {
     -ms-flex-pack: distribute;
         justify-content: space-around;
   }
+}
+
+/*les indexs restaurants*/
+/*index2*/
+#le_gout {
+  background-image: url(image/palette.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+/*index3*/
+#la_note {
+  background-image: url(image/note.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+/*index4*/
+#la_francaise {
+  background-image: url(image/francaise.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+/*index5*/
+#le_delice {
+  background-image: url(image/delice.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+/*code commun index*/
+.titre-restaurant {
+  width: 100%;
+  height: 280px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  text-align: center;
+  font-size: 150%;
+}
+
+.titre-restaurant h2 {
+  font-family: shrikhandregular, arial, sans-serif;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 4% 0 3% 0;
+  border-radius: 25px 25px 0 0;
+  background-color: white;
+}
+
+.titre-restaurant h2 .coeur {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-left: 5%;
+  display: inline-block;
+  cursor: pointer;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  box-sizing: border-box;
+  padding-right: 2%;
+  font: 120%;
+}
+
+.titre-restaurant h2 .coeur > .coeur_plein {
+  display: none;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+}
+
+.titre-restaurant h2 .coeur:hover .coeur_plein {
+  display: block;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#FF79DA), to(#9356DC));
+  background-image: linear-gradient(to top, #FF79DA, #9356DC);
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transform-origin: bottom;
+          transform-origin: bottom;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+  -webkit-transition-duration: 2000ms;
+          transition-duration: 2000ms;
+}
+
+.titre-restaurant h2 .coeur:hover .coeur_vide {
+  display: none;
 }
 /*# sourceMappingURL=style.css.map */

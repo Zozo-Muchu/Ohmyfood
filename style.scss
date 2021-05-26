@@ -40,6 +40,10 @@ $septième:white;
             justify-content: left;
          }
 }
+
+/* acceuil*/
+
+
 header{
     width: 100%;
     height: auto;
@@ -265,6 +269,7 @@ header{
             font: 120%;
                 & > .coeur_plein{
                     display: none;
+                    transform: scale(0);
                 }
                 &:hover{
                     & .coeur_plein{
@@ -273,13 +278,16 @@ header{
                         color: transparent;
                         -webkit-background-clip: text;
                         background-clip: text;
+                        transform: scale(1);
+                        transform-origin: bottom;
+                        transition-property: transform;
+                        transition-duration: 2000ms;
                         }
                     & .coeur_vide{
                     display: none;
                     }
             }
         }
-
 }
 
 footer{
@@ -535,4 +543,80 @@ footer{
             justify-content: space-around;
         }
     }
+}
+
+
+/*les indexs restaurants*/
+/*index2*/
+#le_gout{
+    background-image: url(image/palette.jpg);
+    background-size: cover;
+    background-position: center;
+}
+/*index3*/
+#la_note{
+    background-image: url(image/note.jpg);
+    background-size: cover;
+    background-position: center;
+}
+/*index4*/
+#la_francaise{
+    background-image: url(image/francaise.jpg);
+    background-size: cover;
+    background-position: center;
+}
+/*index5*/
+#le_delice{
+    background-image: url(image/delice.jpg);
+    background-size: cover;
+    background-position: center;
+}
+   
+/*code commun index*/
+.titre-restaurant{
+    width: 100%;
+    height: 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    text-align: center;
+    font-size: 150%;
+        h2{
+            font-family: shrikhandregular, arial, sans-serif;
+            margin: 0;
+            box-sizing: border-box;
+            padding:4% 0 3% 0;
+            border-radius: 25px 25px 0 0;
+            background-color: $septième;
+            .coeur{
+                box-sizing: border-box;
+                padding-left: 5%;
+                display: inline-block;
+                cursor: pointer;
+                align-self: flex-end;
+                box-sizing: border-box;
+                padding-right: 2%;
+                font: 120%;
+                    & > .coeur_plein{
+                        display: none;
+                        transform: scale(0);
+                    }
+                    &:hover{
+                        & .coeur_plein{
+                            display: block;
+                            background-image: linear-gradient(to top, $secondaire, $primaire);
+                            color: transparent;
+                            -webkit-background-clip: text;
+                            background-clip: text;
+                            transform: scale(1);
+                            transform-origin: bottom;
+                            transition-property: transform;
+                            transition-duration: 2000ms;
+                            }
+                        & .coeur_vide{
+                        display: none;
+                        }
+                }
+            }
+        }
 }
