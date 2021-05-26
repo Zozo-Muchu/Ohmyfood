@@ -1,9 +1,18 @@
+@font-face {
+  font-family: 'shrikhandregular';
+  src: url("police/shrikhand/shrikhand-regular-webfont.eot");
+  src: url("police/shrikhand/shrikhand-regular-webfont.eot?#iefix") format("embedded-opentype"), url("police/shrikhand/shrikhand-regular-webfont.woff2") format("woff2"), url("police/shrikhand/shrikhand-regular-webfont.woff") format("woff"), url("police/shrikhand/shrikhand-regular-webfont.ttf") format("truetype"), url("police/shrikhand/shrikhand-regular-webfont.svg#shrikhandregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
 .bloc_page {
   width: 100%;
   margin: auto;
   font-family: roboto;
   color: #0F0D0A;
   cursor: default;
+  font-size: 1.14rem;
 }
 
 .bloc_page a {
@@ -18,7 +27,6 @@
   -webkit-box-pack: left;
       -ms-flex-pack: left;
           justify-content: left;
-  margin-left: -9%;
 }
 
 header {
@@ -44,7 +52,7 @@ header .logo {
 header .header_return {
   color: #0F0D0A;
   font-size: 2rem;
-  padding-top: 7%;
+  padding: 2% 0 5% 0;
 }
 
 .section_presentation {
@@ -63,18 +71,15 @@ header .header_return {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  font-size: 2rem;
   background-color: #DCDCDC;
+  border-top: 2px darkgray solid;
 }
 
 .section_presentation #map {
   margin-right: 3%;
-  padding-top: 1%;
-  font-size: 1.6rem;
 }
 
 .section_presentation .input_recherche {
-  font-size: 1.1rem;
   width: 36%;
   height: auto;
   display: -webkit-box;
@@ -88,7 +93,6 @@ header .header_return {
 }
 
 .section_presentation h1 {
-  font-size: 1.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -100,7 +104,7 @@ header .header_return {
 }
 
 .section_presentation h2 {
-  font-size: 0.9rem;
+  font-size: 90%;
   font-weight: 100;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -112,11 +116,11 @@ header .header_return {
 }
 
 .section_presentation .btn {
-  width: auto;
+  font-size: 90%;
+  max-width: 65vw;
   height: auto;
-  font-size: 0.9rem;
   padding: 2%;
-  margin: 5% 22% 8% 22%;
+  margin: auto;
   border-radius: 2.5rem 2.5rem 2.5rem 2.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -128,6 +132,15 @@ header .header_return {
   color: #F2F2F2;
   background: -webkit-gradient(linear, left top, right bottom, from(#FF79DA), to(#9356DC));
   background: linear-gradient(to bottom right, #FF79DA, #9356DC);
+  -webkit-box-shadow: 6px 6px 6px #cfcfcf;
+          box-shadow: 6px 6px 6px #cfcfcf;
+}
+
+.section_presentation .btn:hover {
+  background: -webkit-gradient(linear, left top, right bottom, from(#ff88de), to(#9b63df));
+  background: linear-gradient(to bottom right, #ff88de, #9b63df);
+  -webkit-box-shadow: 6px 6px 6px #c3c3c3;
+          box-shadow: 6px 6px 6px #c3c3c3;
 }
 
 .section_fonctionnement {
@@ -153,7 +166,6 @@ header .header_return {
   -webkit-box-pack: left;
       -ms-flex-pack: left;
           justify-content: left;
-  font-size: 1.5rem;
 }
 
 .section_fonctionnement ul {
@@ -164,14 +176,41 @@ header .header_return {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin: auto;
+  padding: 0;
 }
 
 .section_fonctionnement li {
   background-color: #F2F2F2;
   border-radius: 20px;
-  margin-top: 3%;
-  width: 65vw;
+  margin: 3% 0 0 0;
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -ms-flex-item-align: center;
+      align-self: center;
+  -webkit-box-shadow: 6px 6px 6px #cfcfcf;
+          box-shadow: 6px 6px 6px #cfcfcf;
+}
+
+.section_fonctionnement li:hover {
+  background-color: #e4d5f6;
+  -webkit-box-shadow: 6px 6px 6px #c3c3c3;
+          box-shadow: 6px 6px 6px #c3c3c3;
+}
+
+.section_fonctionnement li:hover .fa-tablet-alt {
+  color: #9356DC;
+}
+
+.section_fonctionnement li:hover .fa-list-ul {
+  color: #9356DC;
+}
+
+.section_fonctionnement li:hover .fa-list-ul {
+  color: #9356DC;
 }
 
 .section_fonctionnement .li_chiffre {
@@ -192,26 +231,26 @@ header .header_return {
   margin-right: 4%;
 }
 
-.section_fonctionnement .fa-store {
+.section_fonctionnement .fa-list-ul {
   margin-right: 4%;
 }
 
 .section_fonctionnement p {
   width: 100%;
-  font-size: 0.8rem;
 }
 
 .section_restaurants {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   width: 100%;
   height: auto;
-  padding-bottom: 10%;
+  padding: 3%;
   background-color: #F2F2F2;
 }
 
 .section_restaurants h2 {
   width: calc(100%-10%);
   height: auto;
-  padding-top: 2%;
   margin: 5%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -219,25 +258,37 @@ header .header_return {
   -webkit-box-pack: left;
       -ms-flex-pack: left;
           justify-content: left;
-  font-size: 1.5rem;
 }
 
 .section_restaurants a {
   width: 100%;
   height: auto;
-  margin: 6.5%;
-  display: block;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  margin: 6%;
 }
 
 .section_restaurants .index2, .section_restaurants .index3, .section_restaurants .index4, .section_restaurants .index5 {
   width: auto;
-  height: 30vh;
+  height: 240px;
   background-size: cover;
   background-position: center;
   border-radius: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-shadow: 6px 6px 6px #cfcfcf;
+          box-shadow: 6px 6px 6px #cfcfcf;
+}
+
+.section_restaurants .index2:hover, .section_restaurants .index3:hover, .section_restaurants .index4:hover, .section_restaurants .index5:hover {
+  -webkit-box-shadow: 6px 6px 6px #c3c3c3;
+          box-shadow: 6px 6px 6px #c3c3c3;
 }
 
 .section_restaurants .index2 {
@@ -256,107 +307,97 @@ header .header_return {
   background-image: url(image/delice.jpg);
 }
 
-.section_restaurants h3 {
-  font-size: 1.1rem;
-  position: relative;
-  bottom: -75%;
-  padding-left: 2%;
-  background-color: white;
-}
-
-.section_restaurants p {
-  height: 2vh;
-  font-size: 0.9rem;
-  padding-left: 2%;
-  position: relative;
-  bottom: -67%;
-  background-color: white;
-  border-radius: 0 0 15px 15px;
-}
-
 .section_restaurants .nouveau {
   color: #217460;
   background-color: #99E2D0;
-  width: 11vw;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: auto;
   height: auto;
+  margin-right: 1%;
   padding: 1%;
-  font-weight: bold;
-  position: relative;
-  left: 28rem;
-  top: -3.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  position: relative;
+  bottom: 55%;
 }
 
-.section_restaurants .coeur_plein {
-  visibility: visible;
-  position: relative;
-  top: -2.1rem;
-  font-size: 1.2rem;
-  margin-right: 3%;
+.section_restaurants h3 {
+  background-color: white;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-left: 3%;
+}
+
+.section_restaurants p {
+  width: 100%;
+  height: auto;
+  margin: 0;
+  background-color: white;
+  border-radius: 0 0 15px 15px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  color: grey;
-  -webkit-transform: scaleY(0.1);
-          transform: scaleY(0.1);
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-left: 3%;
+  padding-bottom: 2%;
 }
 
-.section_restaurants .coeur_plein:hover {
+.section_restaurants .coeur {
+  display: inline-block;
+  cursor: pointer;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-right: 2%;
+  font: 120%;
+}
+
+.section_restaurants .coeur > .coeur_plein {
+  display: none;
+}
+
+.section_restaurants .coeur:hover .coeur_plein {
+  display: block;
   background-image: -webkit-gradient(linear, left bottom, left top, from(#FF79DA), to(#9356DC));
   background-image: linear-gradient(to top, #FF79DA, #9356DC);
   color: transparent;
   -webkit-background-clip: text;
   background-clip: text;
-  -webkit-transform: scaleY(1);
-          transform: scaleY(1);
-  -webkit-transition: -webkit-transform 2000ms;
-  transition: -webkit-transform 2000ms;
-  transition: transform 2000ms;
-  transition: transform 2000ms, -webkit-transform 2000ms;
 }
 
-.section_restaurants .coeur_vide {
-  color: #0F0D0A;
-  position: relative;
-  top: -2.1rem;
-  font-size: 1.2rem;
-  margin-right: 3%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-}
-
-.section_restaurants .coeur_vide:hover {
-  visibility: hidden;
+.section_restaurants .coeur:hover .coeur_vide {
+  display: none;
 }
 
 footer {
-  width: 100%;
+  width: calc 94%;
   height: auto;
   background-color: #0F0D0A;
-  padding: 0.3% 0 3% 0;
+  padding: 0.3% 3% 3% 3%;
 }
 
 footer h2 {
-  font-family: Shrikhand;
+  font-family: shrikhandregular, Arial, sans-serif;
   color: white;
-  margin-left: 8%;
 }
 
 footer ul {
   list-style-type: none;
-  margin-left: 3%;
 }
 
 footer li {
@@ -374,59 +415,27 @@ footer .puce_footer {
   }
   .section_presentation .input_recherche {
     width: 40%;
-    font-size: 0.9rem;
-  }
-  .section_presentation #map {
-    font-size: 1.1rem;
-    padding: 1% 0 1% 0;
-  }
-  .section_presentation h1 {
-    font-size: 1.1rem;
-  }
-  .section_presentation h2 {
-    font-size: 0.9rem;
-  }
-  .section_presentation .btn {
-    height: auto;
-    width: auto;
-    margin: auto;
-  }
-  .section_fonctionnement h2 {
-    font-size: 1rem;
   }
   .section_fonctionnement li {
-    width: 92%;
+    width: 100%;
   }
-  .section_fonctionnement p {
-    font-size: 0.8rem;
+  .section_fonctionnement .li_chiffre {
+    margin-right: 2%;
+    padding: 0.5% 1.7% 0.5% 1.7%;
+    border-radius: 100%;
   }
-  .section_restaurants h2 {
-    font-size: 1rem;
+  .section_fonctionnement .fa-tablet-alt {
+    margin-right: 2%;
   }
-  .section_restaurants h3 {
-    font-size: 0.9rem;
-    bottom: -84%;
+  .section_fonctionnement .fa-list-ul {
+    margin-right: 2%;
   }
-  .section_restaurants p {
-    font-size: 0.8rem;
-    bottom: -77%;
+  .section_fonctionnement .fa-store {
+    margin-right: 2%;
   }
   .section_restaurants .nouveau {
     width: 23vw;
-    height: auto;
-    padding: 1%;
-    left: 9rem;
-    top: -2.5rem;
-    font-size: 0.8rem;
-  }
-  .section_restaurants .coeur_vide, .section_restaurants .coeur_plein {
-    top: -1.7rem;
-  }
-  footer h2 {
-    font-size: 1rem;
-  }
-  footer ul {
-    font-size: 0.9rem;
+    font-size: 90%;
   }
 }
 
@@ -436,27 +445,13 @@ footer .puce_footer {
     font-size: 1rem;
   }
   .section_presentation #map {
-    font-size: 1.4rem;
     padding: 1% 0 1% 0;
   }
-  .section_presentation h1 {
-    font-size: 1.2rem;
-  }
-  .section_presentation h2 {
-    font-size: 0.9rem;
-  }
-  .section_presentation .btn {
-    font-size: 0.85rem;
-  }
-  .section_fonctionnement h2 {
-    font-size: 1.2rem;
-  }
   .section_fonctionnement li {
-    margin: 3% 0 0 5%;
+    width: 90%;
     border-radius: 10px;
   }
   .section_fonctionnement .li_chiffre {
-    font-size: 1rem;
     margin-right: 5%;
     padding: 0.1% 2% 0.1% 2%;
   }
@@ -469,41 +464,8 @@ footer .puce_footer {
   .section_fonctionnement .fa-store {
     margin-right: 5%;
   }
-  .section_fonctionnement p {
-    width: 100%;
-    font-size: 0.8rem;
-  }
-  .section_restaurants h3 {
-    height: 22px;
-    bottom: -81%;
-  }
   .section_restaurants .index2, .section_restaurants .index3, .section_restaurants .index4, .section_restaurants .index5 {
     height: 205px;
-  }
-  .section_restaurants p {
-    height: 20px;
-    font-size: 0.9rem;
-    position: relative;
-    bottom: -72%;
-  }
-  .section_restaurants .nouveau {
-    width: 17vw;
-    height: auto;
-    padding: 1%;
-    left: 75%;
-    top: -3.5rem;
-    font-size: 1rem;
-  }
-  .section_restaurants .coeur_vide, .section_restaurants .coeur_plein {
-    font-size: 1.6rem;
-    top: -1.8rem;
-  }
-  footer h2 {
-    font-size: 1.1rem;
-  }
-  footer .puce_footer {
-    font-size: 0.9rem;
-    margin-left: 5%;
   }
 }
 
@@ -517,96 +479,21 @@ footer .puce_footer {
   }
   .section_presentation #map {
     padding: 1% 0 0.5% 0;
-    font-size: 1.8rem;
   }
   .section_presentation .input_recherche {
-    font-size: 1.5rem;
     width: 30%;
   }
-  .section_presentation h1 {
-    font-size: 2rem;
-    font-weight: bold;
-  }
-  .section_presentation h2 {
-    font-size: 1.6rem;
-    font-weight: 100;
-  }
-  .section_presentation .btn {
-    font-size: 1.6rem;
-    width: 50%;
-    margin: auto;
-  }
-  .section_fonctionnement h2 {
-    font-size: 2rem;
-  }
-  .section_fonctionnement li {
-    margin: 1%;
-  }
   .section_fonctionnement .li_chiffre {
-    margin-right: 11%;
-    font-size: 1.6rem;
     padding: 0.1% 1.4% 0.1% 1.4%;
   }
   .section_fonctionnement .fa-tablet-alt {
-    font-size: 1.6rem;
     margin-right: 11%;
   }
   .section_fonctionnement .fa-list-ul {
-    font-size: 1.6rem;
     margin-right: 11%;
   }
   .section_fonctionnement .fa-store {
-    font-size: 1.6rem;
     margin-right: 11%;
-  }
-  .section_fonctionnement p {
-    width: 100%;
-    font-size: 1.6rem;
-  }
-  .section_restaurants h2 {
-    font-size: 2rem;
-  }
-  .section_restaurants .index2, .section_restaurants .index3, .section_restaurants .index4, .section_restaurants .index5 {
-    height: 245px;
-  }
-  .section_restaurants h3 {
-    height: 28px;
-    font-size: 1.4rem;
-    position: relative;
-    bottom: -80%;
-  }
-  .section_restaurants p {
-    height: 25px;
-    font-size: 1.2rem;
-    position: relative;
-    bottom: -70%;
-  }
-  .section_restaurants .nouveau {
-    width: 12vw;
-    height: auto;
-    padding: 1%;
-    left: 80%;
-    top: -4.5rem;
-    font-size: 1.1rem;
-  }
-  .section_restaurants .coeur_vide, .section_restaurants .coeur_plein {
-    position: relative;
-    top: -2.1rem;
-    font-size: 1.8rem;
-    margin-right: 3%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
-  }
-  footer h2 {
-    font-size: 1.4rem;
-  }
-  footer .puce_footer {
-    font-size: 1.2rem;
-    margin-left: 6%;
   }
 }
 
@@ -619,48 +506,16 @@ footer .puce_footer {
     height: 60px;
   }
   .section_presentation #map {
-    font-size: 2.5rem;
     padding: 0.5% 0 0.5% 0;
   }
   .section_presentation .input_recherche {
     width: 30%;
-    font-size: 2.1rem;
-  }
-  .section_presentation h1 {
-    font-size: 1.9rem;
-  }
-  .section_presentation h2 {
-    font-size: 1.5rem;
   }
   .section_presentation .btn {
-    font-size: 1.5rem;
     width: 35%;
-    margin: auto;
-  }
-  .section_fonctionnement h2 {
-    font-size: 1.9rem;
-  }
-  .section_fonctionnement ul {
-    margin-left: 15%;
   }
   .section_fonctionnement .li_chiffre {
-    font-size: 1.3rem;
     padding: 0.1% 1% 0.5% 1%;
-  }
-  .section_fonctionnement .fa-tablet-alt {
-    font-size: 1.3rem;
-  }
-  .section_fonctionnement .fa-list-ul {
-    font-size: 1.3rem;
-  }
-  .section_fonctionnement .fa-store {
-    font-size: 1.3rem;
-  }
-  .section_fonctionnement p {
-    font-size: 1.3rem;
-  }
-  .section_restaurants h2 {
-    font-size: 1.9rem;
   }
   .section_restaurants .block_restaurants {
     display: -webkit-box;
@@ -675,36 +530,6 @@ footer .puce_footer {
     margin: auto;
     margin-top: 2%;
     margin-bottom: 2%;
-  }
-  .section_restaurants h3 {
-    font-size: 1.3rem;
-    height: 25px;
-    bottom: -78%;
-  }
-  .section_restaurants p {
-    font-size: 1.2rem;
-    height: 22px;
-    bottom: -71%;
-  }
-  .section_restaurants .nouveau {
-    width: 11vw;
-    height: auto;
-    padding: 1%;
-    left: 70%;
-    top: -4.5rem;
-    font-size: 1rem;
-  }
-  .section_restaurants .coeur_vide, .section_restaurants .coeur_plein {
-    font-size: 1.8rem;
-  }
-  footer h2 {
-    font-size: 1.7rem;
-  }
-  footer ul {
-    margin-left: 10%;
-  }
-  footer .puce_footer {
-    font-size: 1.4rem;
   }
 }
 
@@ -723,45 +548,34 @@ footer .puce_footer {
     height: 60px;
   }
   .section_presentation #map {
-    font-size: 2.4rem;
     padding: 1% 0 1% 0;
   }
   .section_presentation .input_recherche {
-    font-size: 2.2rem;
     width: 30%;
   }
-  .section_presentation h1 {
-    font-size: 2.5rem;
-  }
-  .section_presentation h2 {
-    font-size: 2rem;
-  }
   .section_presentation .btn {
-    font-size: 2rem;
     width: 40%;
-    margin: auto;
   }
   .section_fonctionnement h2 {
-    font-size: 2rem;
+    margin: 0;
+  }
+  .section_fonctionnement ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .section_fonctionnement li {
+    width: 30%;
+    height: auto;
   }
   .section_fonctionnement .li_chiffre {
     padding: 0.5% 1.7% 0.5% 1.7%;
-    font-size: 1.8rem;
-  }
-  .section_fonctionnement .fa-tablet-alt {
-    font-size: 1.8rem;
-  }
-  .section_fonctionnement .fa-list-ul {
-    font-size: 1.8rem;
-  }
-  .section_fonctionnement .fa-store {
-    font-size: 1.8rem;
-  }
-  .section_fonctionnement p {
-    font-size: 1.8rem;
-  }
-  .section_restaurants h2 {
-    font-size: 2rem;
   }
   .section_restaurants .block_restaurants {
     display: -webkit-box;
@@ -778,35 +592,21 @@ footer .puce_footer {
     margin-bottom: 2%;
   }
   .section_restaurants h3 {
-    font-size: 1.5rem;
     height: 28px;
-    bottom: -72%;
   }
   .section_restaurants p {
-    font-size: 1.4rem;
     height: 33px;
-    bottom: -64%;
-  }
-  .section_restaurants .nouveau {
-    width: 8vw;
-    height: auto;
-    padding: 1%;
-    left: 65%;
-    top: -6.5rem;
-    font-size: 1.2rem;
-  }
-  .section_restaurants .coeur_vide, .section_restaurants .coeur_plein {
-    font-size: 1.7rem;
-    top: -2.3rem;
-  }
-  footer h2 {
-    font-size: 2rem;
   }
   footer ul {
-    margin-left: 10%;
-  }
-  footer li {
-    font-size: 1.4rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
   }
 }
 /*# sourceMappingURL=style.css.map */
