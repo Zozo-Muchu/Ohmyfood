@@ -6,10 +6,18 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'robotoregular';
+  src: url("Roboto-Regular-webfont.eot");
+  src: url("Roboto-Regular-webfont.eot?#iefix") format("embedded-opentype"), url("Roboto-Regular-webfont.woff2") format("woff2"), url("Roboto-Regular-webfont.woff") format("woff"), url("Roboto-Regular-webfont.ttf") format("truetype"), url("Roboto-Regular-webfont.svg#robotoregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
 .bloc_page {
   width: 100%;
   margin: auto;
-  font-family: roboto;
+  font-family: robotoregular;
   color: #0F0D0A;
   cursor: default;
   font-size: 1.14rem;
@@ -653,6 +661,14 @@ footer .puce_footer {
 }
 
 /*code commun index*/
+.bloc_index {
+  background-color: #F2F2F2;
+}
+
+.header_index {
+  background-color: white;
+}
+
 .titre-restaurant {
   width: 100%;
   height: 280px;
@@ -668,6 +684,7 @@ footer .puce_footer {
           justify-content: flex-end;
   text-align: center;
   font-size: 150%;
+  margin: 0;
 }
 
 .titre-restaurant h2 {
@@ -677,7 +694,7 @@ footer .puce_footer {
           box-sizing: border-box;
   padding: 4% 0 3% 0;
   border-radius: 25px 25px 0 0;
-  background-color: white;
+  background-color: #F2F2F2;
 }
 
 .titre-restaurant h2 .coeur {
@@ -720,5 +737,134 @@ footer .puce_footer {
 
 .titre-restaurant h2 .coeur:hover .coeur_vide {
   display: none;
+}
+
+.menu {
+  width: 100%;
+  height: auto;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-bottom: 5%;
+}
+
+.menu h2 {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-left: 2%;
+  font-weight: 100;
+  border: 2px blue solid;
+}
+
+.menu h3 {
+  width: 90%;
+  height: auto;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 1% 0 0 2%;
+  margin: 1% 0 0 2%;
+}
+
+.menu p {
+  width: 90%;
+  height: auto;
+  padding: 1% 0 0 2%;
+  margin: 0 0 1% 2%;
+}
+
+.entree .entree_1, .entree .entree_2, .entree .entree_3, .entree .entree_4 {
+  background-color: white;
+  border-radius: 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-bottom: 1%;
+  margin: 2%;
+  -webkit-box-shadow: 6px 6px 6px #cfcfcf;
+          box-shadow: 6px 6px 6px #cfcfcf;
+}
+
+.entree .entree_1:hover, .entree .entree_2:hover, .entree .entree_3:hover, .entree .entree_4:hover {
+  -webkit-box-shadow: 6px 6px 6px #c3c3c3;
+          box-shadow: 6px 6px 6px #c3c3c3;
+}
+
+.plat .plat_1, .plat .plat_2, .plat .plat_3 {
+  background-color: white;
+  border-radius: 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-bottom: 1%;
+  margin: 2%;
+  -webkit-box-shadow: 6px 6px 6px #cfcfcf;
+          box-shadow: 6px 6px 6px #cfcfcf;
+}
+
+.plat .plat_1:hover, .plat .plat_2:hover, .plat .plat_3:hover {
+  -webkit-box-shadow: 6px 6px 6px #c3c3c3;
+          box-shadow: 6px 6px 6px #c3c3c3;
+}
+
+.dessert .dessert_1, .dessert .dessert_2, .dessert .dessert_3 {
+  background-color: white;
+  border-radius: 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-bottom: 1%;
+  margin: 2%;
+  -webkit-box-shadow: 6px 6px 6px #cfcfcf;
+          box-shadow: 6px 6px 6px #cfcfcf;
+}
+
+.dessert .dessert_1:hover, .dessert .dessert_2:hover, .dessert .dessert_3:hover {
+  -webkit-box-shadow: 6px 6px 6px #c3c3c3;
+          box-shadow: 6px 6px 6px #c3c3c3;
+}
+
+.commande {
+  margin: 0;
+}
+
+.commande h2 {
+  width: auto;
+  height: 0;
+  margin: 0;
+  position: relative;
+  right: 1000000rem;
+}
+
+.commande .commander {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-bottom: 10%;
+}
+
+.commande .commander .btn_commande {
+  font-size: 100%;
+  max-width: 65vw;
+  height: auto;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 2%;
+  margin: auto;
+  border-radius: 2.5rem 2.5rem 2.5rem 2.5rem;
+  border: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
+  color: #F2F2F2;
+  background: -webkit-gradient(linear, left top, right bottom, from(#FF79DA), to(#9356DC));
+  background: linear-gradient(to bottom right, #FF79DA, #9356DC);
+  -webkit-box-shadow: 6px 6px 6px #cfcfcf;
+          box-shadow: 6px 6px 6px #cfcfcf;
+}
+
+.commande .commander .btn_commande:hover {
+  background: -webkit-gradient(linear, left top, right bottom, from(#ff88de), to(#9b63df));
+  background: linear-gradient(to bottom right, #ff88de, #9b63df);
+  -webkit-box-shadow: 6px 6px 6px #c3c3c3;
+          box-shadow: 6px 6px 6px #c3c3c3;
 }
 /*# sourceMappingURL=style.css.map */
