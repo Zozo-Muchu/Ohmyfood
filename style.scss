@@ -20,7 +20,6 @@
          url('Roboto-Regular-webfont.svg#robotoregular') format('svg');
     font-weight: normal;
     font-style: normal;
-
 }
 
 $primaire: #9356DC;
@@ -30,6 +29,15 @@ $quaternaire:#F2F2F2;
 $cinquième:#DCDCDC;
 $sixième:#0F0D0A;
 $septième:white;
+
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
 
 
 
@@ -50,6 +58,39 @@ $septième:white;
             display: flex;
             justify-content: left;
          }
+         .coeur_plein .fa-heart{
+            transform: scale(0);
+        }
+        .coeur{
+            box-sizing: border-box;
+            padding-left: 5%;
+            display: inline-block;
+            cursor: pointer;
+            align-self: flex-end;
+            box-sizing: border-box;
+            padding-right: 2%;
+            font: 120%;
+                & > .coeur_plein{
+                    display: none;
+                    color: transparent;
+                }
+                &:hover{
+                    & .coeur_plein{
+                        display: block;
+                    }
+                    & .coeur_vide{
+                        display: none;
+                    }
+                }
+            }
+        .coeur_plein:hover .fa-heart{
+            transform: scale(1);
+            transform-origin: bottom;
+            transition: transform 1000ms ease-in-out;
+            -webkit-background-clip: text;
+            background-clip: text;
+            background-image: linear-gradient(to top, $secondaire, $primaire);
+                        }
 }
 
 /* acceuil*/
@@ -60,16 +101,19 @@ header{
     height: auto;
     display: flex;
     justify-content: center;
+    align-items: center;
         .logo{
             display: flex;
             width: auto;
-            height: 40px;
+            height: 40%;
             padding: 2% 0 5% 0;
         }
         .header_return{
             color: $sixième;
-            font-size: 2rem; 
-            padding: 2% 0 5% 0;  
+            font-size: 200%;
+            width: auto;
+            height:100%; 
+            justify-content: center; 
         }
 }
 .section_presentation{
@@ -271,36 +315,221 @@ header{
             padding-left: 3%;
             padding-bottom: 2%;
         }
-        .coeur{
-            display: inline-block;
-            cursor: pointer;
-            align-self: flex-end;
+}
+
+/*les indexs restaurants*/
+/*index2*/
+#le_gout{
+    background-image: url(image/palette.jpg);
+    background-size: cover;
+    background-position: center;
+}
+/*index3*/
+#la_note{
+    background-image: url(image/note.jpg);
+    background-size: cover;
+    background-position: center;
+}
+/*index4*/
+#la_francaise{
+    background-image: url(image/francaise.jpg);
+    background-size: cover;
+    background-position: center;
+}
+/*index5*/
+#le_delice{
+    background-image: url(image/delice.jpg);
+    background-size: cover;
+    background-position: center;
+}
+   
+/*code commun index*/
+.bloc_index{
+    background-color: $quaternaire;
+}
+.header_index{
+    background-color: $septième;
+    display: flex;
+    justify-content: space-between;
+}
+.titre-restaurant{
+    width: 100%;
+    height: 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    text-align: center;
+    font-size: 350%;
+    margin: 0;
+        h2{
+            font-family: shrikhandregular, arial, sans-serif;
+            margin: 0;
             box-sizing: border-box;
-            padding-right: 2%;
-            font: 120%;
-                & > .coeur_plein{
-                    display: none;
-                    transform: scale(0);
-                }
+            padding:4% 0 3% 0;
+            border-radius: 25px 25px 0 0;
+            background-color: $quaternaire;
+        }
+}
+.menu{
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+    padding-bottom: 5%;
+    font-size: 200%;
+    h2{
+        box-sizing: border-box;
+        font-weight: 100;
+        border-bottom: 3px $tertiaire solid;
+        width: 6%;
+        height: auto;
+        margin: 2%;
+    }
+    h3{
+        width: 150%;
+        height: auto;
+        box-sizing: border-box;
+        padding: 1% 0 0 2%;
+        margin:1% 0 0 2%;
+    }
+    p{
+        width: 150%;
+        height: auto;
+        padding: 1% 0 0 2%;
+        margin: 0 0 1% 2%;
+    }
+    .descrption{
+        display: flex;
+        flex-direction: column;
+    }
+    .prix{
+        width: 50%;
+        height: auto;
+        font-weight: bold;
+        box-sizing: border-box;
+        padding-right: 2%;
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+    }
+}
+.entree{
+        .entree_1, .entree_2, .entree_3, .entree_4{
+            width: auto;
+            height: auto;
+            background-color: $septième;
+            border-radius: 20px;
+            box-sizing: border-box;
+            padding-bottom: 1%;
+            margin: 2%;
+            box-shadow: 6px 6px 6px darken($cinquième,5);
+            display: flex;
+            justify-content: flex-end;
+            justify-content: space-between;
                 &:hover{
-                    & .coeur_plein{
-                        display: block;
-                        background-image: linear-gradient(to top, $secondaire, $primaire);
-                        color: transparent;
-                        -webkit-background-clip: text;
-                        background-clip: text;
-                        transform: scale(1);
-                        transform-origin: bottom;
-                        transition-property: transform;
-                        transition-duration: 2000ms;
-                        }
-                    & .coeur_vide{
-                    display: none;
+                    box-shadow: 6px 6px 6px darken($cinquième,10);
+                    cursor: pointer;
+                }
+        }
+        .entree_1{
+            animation: fadein 1000ms linear;
+        }
+        .entree_2{
+            animation: fadein 1600ms linear;
+        }
+        .entree_3{
+            animation: fadein 2200ms linear;
+        }
+        .entree_4{
+            animation: fadein 2800ms linear;
+        }
+}
+.plat{
+        .plat_1, .plat_2, .plat_3{
+            background-color: $septième;
+            border-radius: 20px;
+            box-sizing: border-box;
+            padding-bottom: 1%;
+            margin: 2%;
+            box-shadow: 6px 6px 6px darken($cinquième,5);
+            display: flex;
+            justify-content: flex-end;
+            justify-content: space-between;
+                &:hover{
+                    box-shadow: 6px 6px 6px darken($cinquième,10);
+                    cursor: pointer;
+                }
+        }
+        .plat_1{
+            animation: fadein 1000ms linear;
+        }
+        .plat_2{
+            animation: fadein 1600ms linear;
+        }
+        .plat_3{
+            animation: fadein 2200ms linear;
+        }
+}
+.dessert{
+        .dessert_1, .dessert_2, .dessert_3{
+            background-color: $septième;
+            border-radius: 20px;
+            box-sizing: border-box;
+            padding-bottom: 1%;
+            margin: 2%;
+            box-shadow: 6px 6px 6px darken($cinquième,5);
+            display: flex;
+            justify-content: flex-end;
+            justify-content: space-between;
+                &:hover{
+                    box-shadow: 6px 6px 6px darken($cinquième,10);
+                    cursor: pointer;
+                }
+        }
+        .dessert_1{
+            animation: fadein 1000ms linear;
+        }
+        .dessert_2{
+            animation: fadein 1600ms linear;
+        }
+        .dessert_3{
+            animation: fadein 2200ms linear;
+        }
+}
+.commande{
+    margin: 0;
+        h2{
+            width: auto;
+            height: 0;
+            margin: 0;
+            position: relative;
+            right: 1000000rem;
+        }
+        .commander{
+            box-sizing: border-box;
+            padding-bottom: 10%;
+            .btn_commande{
+                font-size: 120%;
+                max-width: 65vw;
+                height: auto;
+                box-sizing: border-box;
+                padding:2%;
+                margin:auto;
+                border-radius: 2.5rem 2.5rem 2.5rem 2.5rem;
+                border: none;
+                display: flex;
+                justify-content: center;
+                cursor: pointer;
+                color: $quaternaire;
+                background: linear-gradient(to bottom right, $secondaire,$primaire);
+                box-shadow: 6px 6px 6px darken($cinquième,5);
+                    &:hover{
+                        background: linear-gradient(to bottom right, lighten($secondaire,3), lighten($primaire,3));
+                        box-shadow: 6px 6px 6px darken($cinquième,10);
                     }
             }
         }
 }
-
+/*code commun*/
 footer{
     width: calc (100%-6%);
     height: auto;
@@ -317,19 +546,29 @@ footer{
             margin: 1%;
         }
         .puce_footer{
-            color: white;
+            color:$septième;
+                &:hover {
+                    color: darken($septième, 10);
+                }
         }
 }
 
 
-
+/* les media queries*/
 
 /*XS format mobile*/
 @media screen and (max-width:280px){
 
+    /*acceuil*/
     header{
         .logo{
+            height: 20px;
+        }
+        .header_return{
             height: 30px;
+            .fa-arrow-left{
+                font-size: 70%;
+            }
         }
     }
     .section_presentation{
@@ -363,8 +602,19 @@ footer{
         }
     }
 }
-
-
+/*index*/
+.titre-restaurant{
+    font-size:80%
+}
+.menu{
+    font-size: 80%;
+}
+.commander{
+    font-size: 80%;
+}
+footer{
+    font-size: 80%;
+}
 
 /*S format mobile*/
 @media screen and (max-width: 653px)and (min-width:281px){
@@ -404,6 +654,19 @@ footer{
         }
     }
 }
+/*index*/
+.titre-restaurant{
+    font-size:170%
+}
+.menu{
+    font-size: 150%;
+}
+.commander{
+    font-size: 150%;
+}
+footer{
+    font-size: 150%;
+}
 
 
 
@@ -414,6 +677,9 @@ footer{
         height: auto;
         .logo{
        height: 50px;
+        }
+        .header_return{
+            height: 50px;
         }
     }
     .section_presentation{
@@ -448,6 +714,9 @@ footer{
 
     header{
         height: auto;
+        .logo{
+            height: 60px;
+        }
         .logo{
             height: 60px;
         }
@@ -498,6 +767,9 @@ footer{
         height: auto;
             .logo{
             height: 60px;
+            }
+            .header_return{
+                height: 60px;
             }
     }
     .section_presentation{
@@ -557,185 +829,3 @@ footer{
 }
 
 
-/*les indexs restaurants*/
-/*index2*/
-#le_gout{
-    background-image: url(image/palette.jpg);
-    background-size: cover;
-    background-position: center;
-}
-/*index3*/
-#la_note{
-    background-image: url(image/note.jpg);
-    background-size: cover;
-    background-position: center;
-}
-/*index4*/
-#la_francaise{
-    background-image: url(image/francaise.jpg);
-    background-size: cover;
-    background-position: center;
-}
-/*index5*/
-#le_delice{
-    background-image: url(image/delice.jpg);
-    background-size: cover;
-    background-position: center;
-}
-   
-/*code commun index*/
-.bloc_index{
-    background-color: $quaternaire;
-}
-.header_index{
-    background-color: $septième;
-}
-.titre-restaurant{
-    width: 100%;
-    height: 280px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    text-align: center;
-    font-size: 150%;
-    margin: 0;
-        h2{
-            font-family: shrikhandregular, arial, sans-serif;
-            margin: 0;
-            box-sizing: border-box;
-            padding:4% 0 3% 0;
-            border-radius: 25px 25px 0 0;
-            background-color: $quaternaire;
-        }
-            .coeur_plein .fa-heart{
-                transform: scale(0);
-            }
-            .coeur{
-                box-sizing: border-box;
-                padding-left: 5%;
-                display: inline-block;
-                cursor: pointer;
-                align-self: flex-end;
-                box-sizing: border-box;
-                padding-right: 2%;
-                font: 120%;
-                    & > .coeur_plein{
-                        display: none;
-                        color: transparent;
-                    }
-                    &:hover{
-                        & .coeur_plein{
-                            display: block;
-                        }
-                        & .coeur_vide{
-                            display: none;
-                        }
-                    }
-                }
-            .coeur_plein:hover .fa-heart{
-                transform: scale(1);
-                transform-origin: bottom;
-                transition: transform 1000ms ease-in-out;
-                -webkit-background-clip: text;
-                background-clip: text;
-                background-image: linear-gradient(to top, $secondaire, $primaire);
-                            }
-}
-.menu{
-    width: 100%;
-    height: auto;
-    box-sizing: border-box;
-    padding-bottom: 5%;
-    h2{
-        box-sizing: border-box;
-        padding-left: 2%;
-        font-weight: 100;
-        border: 2px blue solid;
-    }
-    h3{
-        width: 90%;
-        height: auto;
-        box-sizing: border-box;
-        padding: 1% 0 0 2%;
-        margin:1% 0 0 2%;
-    }
-    p{
-        width: 90%;
-        height: auto;
-        padding: 1% 0 0 2%;
-        margin: 0 0 1% 2%;
-    }
-}
-.entree{
-        .entree_1, .entree_2, .entree_3, .entree_4{
-            background-color: $septième;
-            border-radius: 20px;
-            box-sizing: border-box;
-            padding-bottom: 1%;
-            margin: 2%;
-            box-shadow: 6px 6px 6px darken($cinquième,5);
-                &:hover{
-                    box-shadow: 6px 6px 6px darken($cinquième,10);
-                }
-        }
-}
-.plat{
-        .plat_1, .plat_2, .plat_3{
-            background-color: $septième;
-            border-radius: 20px;
-            box-sizing: border-box;
-            padding-bottom: 1%;
-            margin: 2%;
-            box-shadow: 6px 6px 6px darken($cinquième,5);
-                &:hover{
-                    box-shadow: 6px 6px 6px darken($cinquième,10);
-                }
-        }
-}
-.dessert{
-        .dessert_1, .dessert_2, .dessert_3{
-            background-color: $septième;
-            border-radius: 20px;
-            box-sizing: border-box;
-            padding-bottom: 1%;
-            margin: 2%;
-            box-shadow: 6px 6px 6px darken($cinquième,5);
-                &:hover{
-                    box-shadow: 6px 6px 6px darken($cinquième,10);
-                }
-        }
-}
-.commande{
-    margin: 0;
-        h2{
-            width: auto;
-            height: 0;
-            margin: 0;
-            position: relative;
-            right: 1000000rem;
-        }
-        .commander{
-            box-sizing: border-box;
-            padding-bottom: 10%;
-            .btn_commande{
-                font-size: 100%;
-                max-width: 65vw;
-                height: auto;
-                box-sizing: border-box;
-                padding:2%;
-                margin:auto;
-                border-radius: 2.5rem 2.5rem 2.5rem 2.5rem;
-                border: none;
-                display: flex;
-                justify-content: center;
-                cursor: pointer;
-                color: $quaternaire;
-                background: linear-gradient(to bottom right, $secondaire,$primaire);
-                box-shadow: 6px 6px 6px darken($cinquième,5);
-                    &:hover{
-                        background: linear-gradient(to bottom right, lighten($secondaire,3), lighten($primaire,3));
-                        box-shadow: 6px 6px 6px darken($cinquième,10);
-                    }
-            }
-        }
-}
