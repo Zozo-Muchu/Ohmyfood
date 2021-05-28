@@ -606,6 +606,10 @@ footer{
             padding:4% 0 3% 0;
             border-radius: 25px 25px 0 0;
             background-color: $quaternaire;
+        }
+            .coeur_plein .fa-heart{
+                transform: scale(0);
+            }
             .coeur{
                 box-sizing: border-box;
                 padding-left: 5%;
@@ -617,26 +621,25 @@ footer{
                 font: 120%;
                     & > .coeur_plein{
                         display: none;
-                        transform: scale(0);
+                        color: transparent;
                     }
                     &:hover{
                         & .coeur_plein{
                             display: block;
-                            background-image: linear-gradient(to top, $secondaire, $primaire);
-                            color: transparent;
-                            -webkit-background-clip: text;
-                            background-clip: text;
-                            transform: scale(1);
-                            transform-origin: bottom;
-                            transition-property: transform;
-                            transition-duration: 2000ms;
-                            }
-                        & .coeur_vide{
-                        display: none;
                         }
+                        & .coeur_vide{
+                            display: none;
+                        }
+                    }
                 }
-            }
-        }
+            .coeur_plein:hover .fa-heart{
+                transform: scale(1);
+                transform-origin: bottom;
+                transition: transform 1000ms ease-in-out;
+                -webkit-background-clip: text;
+                background-clip: text;
+                background-image: linear-gradient(to top, $secondaire, $primaire);
+                            }
 }
 .menu{
     width: 100%;
