@@ -14,7 +14,7 @@
   font-style: normal;
 }
 
-@-webkit-keyframes fadein {
+@-webkit-keyframes fondu {
   from {
     opacity: 0;
   }
@@ -23,7 +23,7 @@
   }
 }
 
-@keyframes fadein {
+@keyframes fondu {
   from {
     opacity: 0;
   }
@@ -196,7 +196,7 @@ header .header_return {
 }
 
 .section_presentation .btn {
-  font-size: 90%;
+  font-size: 100%;
   max-width: 65vw;
   height: auto;
   padding: 2%;
@@ -517,6 +517,12 @@ header .header_return {
   font-size: 200%;
 }
 
+.menu h6 {
+  margin: 0;
+  position: relative;
+  right: -100000000rem;
+}
+
 .menu h2 {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -600,23 +606,23 @@ header .header_return {
 }
 
 .entree .entree_1 {
-  -webkit-animation: fadein 1000ms linear;
-          animation: fadein 1000ms linear;
+  -webkit-animation: fondu 1000ms linear 0ms 1 normal none;
+          animation: fondu 1000ms linear 0ms 1 normal none;
 }
 
 .entree .entree_2 {
-  -webkit-animation: fadein 1600ms linear;
-          animation: fadein 1600ms linear;
+  -webkit-animation: fondu 1000ms linear 100ms 1 normal none;
+          animation: fondu 1000ms linear 100ms 1 normal none;
 }
 
 .entree .entree_3 {
-  -webkit-animation: fadein 2200ms linear;
-          animation: fadein 2200ms linear;
+  -webkit-animation: fondu 1000ms linear 200ms 1 normal none;
+          animation: fondu 1000ms linear 200ms 1 normal none;
 }
 
 .entree .entree_4 {
-  -webkit-animation: fadein 2800ms linear;
-          animation: fadein 2800ms linear;
+  -webkit-animation: fondu 1000ms linear 300ms 1 normal none;
+          animation: fondu 1000ms linear 300ms 1 normal none;
 }
 
 .plat .plat_1, .plat .plat_2, .plat .plat_3 {
@@ -646,18 +652,18 @@ header .header_return {
 }
 
 .plat .plat_1 {
-  -webkit-animation: fadein 1000ms linear;
-          animation: fadein 1000ms linear;
+  -webkit-animation: fondu 1000ms linear 0ms 1 normal none;
+          animation: fondu 1000ms linear 0ms 1 normal none;
 }
 
 .plat .plat_2 {
-  -webkit-animation: fadein 1600ms linear;
-          animation: fadein 1600ms linear;
+  -webkit-animation: fondu 1000ms linear 100ms 1 normal none;
+          animation: fondu 1000ms linear 100ms 1 normal none;
 }
 
 .plat .plat_3 {
-  -webkit-animation: fadein 2200ms linear;
-          animation: fadein 2200ms linear;
+  -webkit-animation: fondu 1000ms linear 200ms 1 normal none;
+          animation: fondu 1000ms linear 200ms 1 normal none;
 }
 
 .dessert .dessert_1, .dessert .dessert_2, .dessert .dessert_3 {
@@ -687,18 +693,18 @@ header .header_return {
 }
 
 .dessert .dessert_1 {
-  -webkit-animation: fadein 1000ms linear;
-          animation: fadein 1000ms linear;
+  -webkit-animation: fondu 1000ms linear 0ms 1 normal none;
+          animation: fondu 1000ms linear 0ms 1 normal none;
 }
 
 .dessert .dessert_2 {
-  -webkit-animation: fadein 1600ms linear;
-          animation: fadein 1600ms linear;
+  -webkit-animation: fondu 1000ms linear 100ms 1 normal none;
+          animation: fondu 1000ms linear 100ms 1 normal none;
 }
 
 .dessert .dessert_3 {
-  -webkit-animation: fadein 2200ms linear;
-          animation: fadein 2200ms linear;
+  -webkit-animation: fondu 1000ms linear 200ms 1 normal none;
+          animation: fondu 1000ms linear 200ms 1 normal none;
 }
 
 .commande {
@@ -720,7 +726,6 @@ header .header_return {
 }
 
 .commande .commander .btn_commande {
-  font-size: 120%;
   max-width: 65vw;
   height: auto;
   -webkit-box-sizing: border-box;
@@ -784,7 +789,7 @@ footer .puce_footer:hover {
 @media screen and (max-width: 280px) {
   /*acceuil*/
   header .logo {
-    height: 20px;
+    height: 30px;
   }
   header .header_return {
     height: 30px;
@@ -819,26 +824,38 @@ footer .puce_footer:hover {
 }
 
 /*index*/
-.titre-restaurant {
+.titre-restaurant-nom {
+  font-size: 75%;
+}
+
+.menu .titre-plat {
+  font-size: 75%;
+}
+
+.menu .descrption {
+  font-size: 70%;
+}
+
+.menu .prix {
+  font-size: 70%;
+}
+
+.commande .btn_commande {
+  font-size: 100%;
+}
+
+footer h2 {
   font-size: 80%;
 }
 
-.menu {
-  font-size: 80%;
-}
-
-.commander {
-  font-size: 80%;
-}
-
-footer {
+footer a {
   font-size: 80%;
 }
 
 /*S format mobile*/
 @media screen and (max-width: 653px) and (min-width: 281px) {
-  .section_presentation .input_recherche {
-    font-size: 1rem;
+  header .logo {
+    height: 40px;
   }
   .section_presentation #map {
     padding: 1% 0 1% 0;
@@ -949,6 +966,9 @@ footer {
     margin: auto;
     margin-top: 2%;
     margin-bottom: 2%;
+  }
+  .titre-restaurant {
+    font-size: 180%;
   }
 }
 

@@ -30,13 +30,25 @@ $cinquième:#DCDCDC;
 $sixième:#0F0D0A;
 $septième:white;
 
-@keyframes fadein {
+@keyframes fondu {
     from {
         opacity:0;
     }
     to {
         opacity:1;
     }
+}
+@mixin valeur_fondu1 {
+    animation: fondu 1000ms linear 0ms 1 normal none;
+}
+@mixin valeur_fondu2 {
+    animation: fondu 1000ms linear 100ms 1 normal none;
+}
+@mixin valeur_fondu3 {
+    animation: fondu 1000ms linear 200ms 1 normal none;
+}
+@mixin valeur_fondu4 {
+    animation: fondu 1000ms linear 300ms 1 normal none;
 }
 
 
@@ -154,7 +166,7 @@ header{
             text-align: center;
         }
         .btn{
-            font-size: 90%;
+            font-size: 100%;
             max-width: 65vw;
             height: auto;
             padding:2%;
@@ -376,6 +388,11 @@ header{
     box-sizing: border-box;
     padding-bottom: 5%;
     font-size: 200%;
+    h6{
+        margin: 0;
+        position: relative;
+        right: -100000000rem;
+    }
     h2{
         box-sizing: border-box;
         font-weight: 100;
@@ -428,19 +445,20 @@ header{
                 &:hover{
                     box-shadow: 6px 6px 6px darken($cinquième,10);
                     cursor: pointer;
+                    
                 }
         }
         .entree_1{
-            animation: fadein 1000ms linear;
+            @include valeur_fondu1;
         }
         .entree_2{
-            animation: fadein 1600ms linear;
+            @include valeur_fondu2;
         }
         .entree_3{
-            animation: fadein 2200ms linear;
+            @include valeur_fondu3;
         }
         .entree_4{
-            animation: fadein 2800ms linear;
+            @include valeur_fondu4;
         }
 }
 .plat{
@@ -460,13 +478,13 @@ header{
                 }
         }
         .plat_1{
-            animation: fadein 1000ms linear;
+            @include valeur_fondu1;
         }
         .plat_2{
-            animation: fadein 1600ms linear;
+            @include valeur_fondu2;
         }
         .plat_3{
-            animation: fadein 2200ms linear;
+            @include valeur_fondu3;
         }
 }
 .dessert{
@@ -486,13 +504,13 @@ header{
                 }
         }
         .dessert_1{
-            animation: fadein 1000ms linear;
+            @include valeur_fondu1;
         }
         .dessert_2{
-            animation: fadein 1600ms linear;
+            @include valeur_fondu2;
         }
         .dessert_3{
-            animation: fadein 2200ms linear;
+            @include valeur_fondu3;
         }
 }
 .commande{
@@ -508,7 +526,6 @@ header{
             box-sizing: border-box;
             padding-bottom: 10%;
             .btn_commande{
-                font-size: 120%;
                 max-width: 65vw;
                 height: auto;
                 box-sizing: border-box;
@@ -562,7 +579,7 @@ footer{
     /*acceuil*/
     header{
         .logo{
-            height: 20px;
+            height: 30px;
         }
         .header_return{
             height: 30px;
@@ -603,26 +620,43 @@ footer{
     }
 }
 /*index*/
-.titre-restaurant{
-    font-size:80%
+.titre-restaurant-nom{
+    font-size:75%
 }
 .menu{
-    font-size: 80%;
+    .titre-plat{
+    font-size: 75%;
+    }
+    .descrption{
+        font-size: 70%;
+    }
+    .prix{
+        font-size: 70%;
+    }
 }
-.commander{
-    font-size: 80%;
+.commande{
+    .btn_commande{
+        font-size: 100%;
+    }
 }
 footer{
-    font-size: 80%;
+    h2{
+        font-size: 80%;
+    }
+    a{
+        font-size: 80%;
+    }
 }
 
 /*S format mobile*/
 @media screen and (max-width: 653px)and (min-width:281px){
 
-    .section_presentation{
-        .input_recherche{
-            font-size: 1rem;
+    header{
+        .logo{
+            height: 40px;
         }
+    }
+    .section_presentation{
         #map{
             padding: 1% 0 1% 0;
         }
@@ -749,6 +783,9 @@ footer{
             margin-top: 2%;
             margin-bottom: 2%;
         }
+    }
+    .titre-restaurant{
+                font-size: 180%;
     }
 }
 
