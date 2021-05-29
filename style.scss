@@ -38,17 +38,53 @@ $septième:white;
         opacity:1;
     }
 }
+@keyframes loading {
+    0% { transform: rotate(0deg);}
+    100% { transform: rotate(360deg);}
+}
+
 @mixin valeur_fondu1 {
-    animation: fondu 1000ms linear 0ms 1 normal none;
+    animation: fondu 1000ms linear 1300ms 1 normal none;
 }
 @mixin valeur_fondu2 {
-    animation: fondu 1000ms linear 100ms 1 normal none;
+    animation: fondu 1000ms linear 1500ms 1 normal none;
 }
 @mixin valeur_fondu3 {
-    animation: fondu 1000ms linear 200ms 1 normal none;
+    animation: fondu 1000ms linear 1600ms 1 normal none;
 }
 @mixin valeur_fondu4 {
-    animation: fondu 1000ms linear 300ms 1 normal none;
+    animation: fondu 1000ms linear 1800ms 1 normal none;
+}
+@mixin check{
+    display: flex;
+    width: 15%;
+    height: auto;
+    border-radius: 0 20px 20px 0;
+    background-color: $tertiaire;
+    font-size: 110%;
+    align-items: center;
+    justify-content: center;
+    color: $septième;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 2s linear ease-in-out;
+}
+@mixin check_hover {
+    box-shadow: 6px 6px 6px darken($cinquième,10);
+    cursor: pointer;
+        & .check{
+            transform:scaleX(1);
+            transform-origin: right;
+            transition: transform 1000ms ease-in-out;
+        }
+        & .fa-check-circle{
+            transform: rotate(360deg);
+            transition: transform 1000ms ease-in-out;
+        }
+        & .prix{
+            transform:translateX(-100%);
+            transition: transform 1000ms ease-in-out;
+        }
 }
 
 
@@ -331,6 +367,71 @@ header{
 
 /*les indexs restaurants*/
 /*index2*/
+.loading_spinner{
+    position: absolute;
+    z-index: 999;
+    width: 100%;
+    height: 100%;
+    background-color: $cinquième;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*commande pour faire disparaitre la page trouver la bonne classe
+    opacity:0;
+    transition: opacity 0.4s ease-out;
+    */
+}
+.lettre{
+    color: $cinquième;
+    font-size: 200%;
+    letter-spacing: 15px;
+    animation: lettres 1.2s linear infinite;
+
+}
+@keyframes lettres{
+    0%{
+        color: darken($tertiaire,20);
+        text-shadow: 0 0 6px darken($tertiaire,20);
+    }
+    90%{
+        color:$cinquième;
+    }
+    100%{
+        color: darken($tertiaire,20);
+        text-shadow: 0 0 6px darken($tertiaire,20);
+    }
+}
+.lettre:nth-child(1){
+    animation-delay:0.1s;
+}
+.lettre:nth-child(2){
+    animation-delay:0.2s;
+}
+.lettre:nth-child(3){
+    animation-delay:0.3s;
+}
+.lettre:nth-child(4){
+    animation-delay:0.4s;
+}
+.lettre:nth-child(5){
+    animation-delay:0.5s;
+}
+.lettre:nth-child(6){
+    animation-delay:0.6s;
+}
+.lettre:nth-child(7){
+    animation-delay:0.7s;
+}
+.lettre:nth-child(8){
+    animation-delay:0.8s;
+}
+.lettre:nth-child(9){
+    animation-delay:0.9s;
+}
+.lettre:nth-child(10){
+    animation-delay:1s;
+}
+
 #le_gout{
     background-image: url(image/palette.jpg);
     background-size: cover;
@@ -402,30 +503,38 @@ header{
         margin: 2%;
     }
     h3{
-        width: 150%;
+        width: 100%;
         height: auto;
         box-sizing: border-box;
-        padding: 1% 0 0 2%;
+        padding: 5% 0 0% 5%;
         margin:1% 0 0 2%;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
     }
     p{
-        width: 150%;
+        width: 100%;
         height: auto;
-        padding: 1% 0 0 2%;
+        box-sizing: border-box;
+        padding: 1% 0 5% 5%;
         margin: 0 0 1% 2%;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
     }
     .descrption{
         display: flex;
         flex-direction: column;
+        width: 70%;
+        height: auto;
     }
     .prix{
-        width: 50%;
+        width: 10%;
         height: auto;
         font-weight: bold;
         box-sizing: border-box;
-        padding-right: 2%;
         display: flex;
-        align-items: flex-end;
+        align-items: center;
         justify-content: flex-end;
     }
 }
@@ -436,16 +545,16 @@ header{
             background-color: $septième;
             border-radius: 20px;
             box-sizing: border-box;
-            padding-bottom: 1%;
             margin: 2%;
             box-shadow: 6px 6px 6px darken($cinquième,5);
             display: flex;
             justify-content: flex-end;
             justify-content: space-between;
+                & > .check{
+                    @include check;
+                }
                 &:hover{
-                    box-shadow: 6px 6px 6px darken($cinquième,10);
-                    cursor: pointer;
-                    
+                   @include check_hover;
                 }
         }
         .entree_1{
@@ -466,16 +575,17 @@ header{
             background-color: $septième;
             border-radius: 20px;
             box-sizing: border-box;
-            padding-bottom: 1%;
             margin: 2%;
             box-shadow: 6px 6px 6px darken($cinquième,5);
             display: flex;
             justify-content: flex-end;
             justify-content: space-between;
-                &:hover{
-                    box-shadow: 6px 6px 6px darken($cinquième,10);
-                    cursor: pointer;
-                }
+            & > .check{
+                @include check;
+            }
+            &:hover{
+               @include check_hover;
+            }
         }
         .plat_1{
             @include valeur_fondu1;
@@ -492,16 +602,17 @@ header{
             background-color: $septième;
             border-radius: 20px;
             box-sizing: border-box;
-            padding-bottom: 1%;
             margin: 2%;
             box-shadow: 6px 6px 6px darken($cinquième,5);
             display: flex;
             justify-content: flex-end;
             justify-content: space-between;
-                &:hover{
-                    box-shadow: 6px 6px 6px darken($cinquième,10);
-                    cursor: pointer;
-                }
+            & > .check{
+                @include check;
+            }
+            &:hover{
+               @include check_hover;
+            }
         }
         .dessert_1{
             @include valeur_fondu1;
