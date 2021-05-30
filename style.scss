@@ -38,22 +38,18 @@ $septième:white;
         opacity:1;
     }
 }
-@keyframes loading {
-    0% { transform: rotate(0deg);}
-    100% { transform: rotate(360deg);}
-}
 
 @mixin valeur_fondu1 {
-    animation: fondu 1000ms linear 1300ms 1 normal none;
+    animation: fondu 1000ms linear 0ms 1 normal none;
 }
 @mixin valeur_fondu2 {
-    animation: fondu 1000ms linear 1500ms 1 normal none;
+    animation: fondu 1000ms linear 300ms 1 normal none;
 }
 @mixin valeur_fondu3 {
-    animation: fondu 1000ms linear 1600ms 1 normal none;
+    animation: fondu 1000ms linear 600ms 1 normal none;
 }
 @mixin valeur_fondu4 {
-    animation: fondu 1000ms linear 1800ms 1 normal none;
+    animation: fondu 1000ms linear 900ms 1 normal none;
 }
 @mixin check{
     display: flex;
@@ -75,24 +71,95 @@ $septième:white;
         & .check{
             transform:scaleX(1);
             transform-origin: right;
-            transition: transform 1000ms ease-in-out;
+            transition: transform 500ms linear;
         }
         & .fa-check-circle{
             transform: rotate(360deg);
-            transition: transform 1000ms ease-in-out;
+            transition: transform 500ms linear;
         }
         & .prix{
-            transform:translateX(-100%);
-            transition: transform 1000ms ease-in-out;
+            transform:translateX(-10%);
+            transition: transform 500ms linear;
+        }
+        & .descrption{
+            width:70%;
+            transition: width 500ms linear;
         }
 }
+ 
+ .loading_spinner{
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    height: 100%;
+    top:0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: $cinquième;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.lettre{
+    color: $cinquième;
+    font-size: 200%;
+    letter-spacing: 15px;
+    animation: lettres 1.2s linear infinite;
 
-
-
+}
+@keyframes lettres{
+    0%{
+        color: darken($tertiaire,20);
+        text-shadow: 0 0 6px darken($tertiaire,20);
+    }
+    90%{
+        color:$cinquième;
+    }
+    100%{
+        color: darken($tertiaire,20);
+        text-shadow: 0 0 6px darken($tertiaire,20);
+    }
+}
+.lettre:nth-child(1){
+    animation-delay:0.1s;
+}
+.lettre:nth-child(2){
+    animation-delay:0.2s;
+}
+.lettre:nth-child(3){
+    animation-delay:0.3s;
+}
+.lettre:nth-child(4){
+    animation-delay:0.4s;
+}
+.lettre:nth-child(5){
+    animation-delay:0.5s;
+}
+.lettre:nth-child(6){
+    animation-delay:0.6s;
+}
+.lettre:nth-child(7){
+    animation-delay:0.7s;
+}
+.lettre:nth-child(8){
+    animation-delay:0.8s;
+}
+.lettre:nth-child(9){
+    animation-delay:0.9s;
+}
+.lettre:nth-child(10){
+    animation-delay:1s;
+}
+.loading {
+    opacity:0;
+    transition: opacity 3s linear;
+}
 
 
 .bloc_page{
     width:100%;
+    height:auto;
     margin: auto;
     font-family: robotoregular;
     color: $sixième;
@@ -367,70 +434,6 @@ header{
 
 /*les indexs restaurants*/
 /*index2*/
-.loading_spinner{
-    position: absolute;
-    z-index: 999;
-    width: 100%;
-    height: 100%;
-    background-color: $cinquième;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /*commande pour faire disparaitre la page trouver la bonne classe
-    opacity:0;
-    transition: opacity 0.4s ease-out;
-    */
-}
-.lettre{
-    color: $cinquième;
-    font-size: 200%;
-    letter-spacing: 15px;
-    animation: lettres 1.2s linear infinite;
-
-}
-@keyframes lettres{
-    0%{
-        color: darken($tertiaire,20);
-        text-shadow: 0 0 6px darken($tertiaire,20);
-    }
-    90%{
-        color:$cinquième;
-    }
-    100%{
-        color: darken($tertiaire,20);
-        text-shadow: 0 0 6px darken($tertiaire,20);
-    }
-}
-.lettre:nth-child(1){
-    animation-delay:0.1s;
-}
-.lettre:nth-child(2){
-    animation-delay:0.2s;
-}
-.lettre:nth-child(3){
-    animation-delay:0.3s;
-}
-.lettre:nth-child(4){
-    animation-delay:0.4s;
-}
-.lettre:nth-child(5){
-    animation-delay:0.5s;
-}
-.lettre:nth-child(6){
-    animation-delay:0.6s;
-}
-.lettre:nth-child(7){
-    animation-delay:0.7s;
-}
-.lettre:nth-child(8){
-    animation-delay:0.8s;
-}
-.lettre:nth-child(9){
-    animation-delay:0.9s;
-}
-.lettre:nth-child(10){
-    animation-delay:1s;
-}
 
 #le_gout{
     background-image: url(image/palette.jpg);
@@ -525,12 +528,13 @@ header{
     .descrption{
         display: flex;
         flex-direction: column;
-        width: 70%;
+        width: 100%;
         height: auto;
     }
     .prix{
         width: 10%;
         height: auto;
+        margin-left:2%;
         font-weight: bold;
         box-sizing: border-box;
         display: flex;

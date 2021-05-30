@@ -32,30 +32,122 @@
   }
 }
 
-@-webkit-keyframes loading {
+.loading_spinner {
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: #DCDCDC;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.lettre {
+  color: #DCDCDC;
+  font-size: 200%;
+  letter-spacing: 15px;
+  -webkit-animation: lettres 1.2s linear infinite;
+          animation: lettres 1.2s linear infinite;
+}
+
+@-webkit-keyframes lettres {
   0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+    color: #4acbab;
+    text-shadow: 0 0 6px #4acbab;
+  }
+  90% {
+    color: #DCDCDC;
   }
   100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
+    color: #4acbab;
+    text-shadow: 0 0 6px #4acbab;
   }
 }
 
-@keyframes loading {
+@keyframes lettres {
   0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+    color: #4acbab;
+    text-shadow: 0 0 6px #4acbab;
+  }
+  90% {
+    color: #DCDCDC;
   }
   100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
+    color: #4acbab;
+    text-shadow: 0 0 6px #4acbab;
   }
+}
+
+.lettre:nth-child(1) {
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s;
+}
+
+.lettre:nth-child(2) {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+
+.lettre:nth-child(3) {
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+}
+
+.lettre:nth-child(4) {
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+}
+
+.lettre:nth-child(5) {
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+
+.lettre:nth-child(6) {
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
+}
+
+.lettre:nth-child(7) {
+  -webkit-animation-delay: 0.7s;
+          animation-delay: 0.7s;
+}
+
+.lettre:nth-child(8) {
+  -webkit-animation-delay: 0.8s;
+          animation-delay: 0.8s;
+}
+
+.lettre:nth-child(9) {
+  -webkit-animation-delay: 0.9s;
+          animation-delay: 0.9s;
+}
+
+.lettre:nth-child(10) {
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+.loading {
+  opacity: 0;
+  -webkit-transition: opacity 3s linear;
+  transition: opacity 3s linear;
 }
 
 .bloc_page {
   width: 100%;
+  height: auto;
   margin: auto;
   font-family: robotoregular;
   color: #0F0D0A;
@@ -460,113 +552,6 @@ header .header_return {
 
 /*les indexs restaurants*/
 /*index2*/
-.loading_spinner {
-  position: absolute;
-  z-index: 999;
-  width: 100%;
-  height: 100%;
-  background-color: #DCDCDC;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  /*commande pour faire disparaitre la page trouver la bonne classe
-    opacity:0;
-    transition: opacity 0.4s ease-out;
-    */
-}
-
-.lettre {
-  color: #DCDCDC;
-  font-size: 200%;
-  letter-spacing: 15px;
-  -webkit-animation: lettres 1.2s linear infinite;
-          animation: lettres 1.2s linear infinite;
-}
-
-@-webkit-keyframes lettres {
-  0% {
-    color: #4acbab;
-    text-shadow: 0 0 6px #4acbab;
-  }
-  90% {
-    color: #DCDCDC;
-  }
-  100% {
-    color: #4acbab;
-    text-shadow: 0 0 6px #4acbab;
-  }
-}
-
-@keyframes lettres {
-  0% {
-    color: #4acbab;
-    text-shadow: 0 0 6px #4acbab;
-  }
-  90% {
-    color: #DCDCDC;
-  }
-  100% {
-    color: #4acbab;
-    text-shadow: 0 0 6px #4acbab;
-  }
-}
-
-.lettre:nth-child(1) {
-  -webkit-animation-delay: 0.1s;
-          animation-delay: 0.1s;
-}
-
-.lettre:nth-child(2) {
-  -webkit-animation-delay: 0.2s;
-          animation-delay: 0.2s;
-}
-
-.lettre:nth-child(3) {
-  -webkit-animation-delay: 0.3s;
-          animation-delay: 0.3s;
-}
-
-.lettre:nth-child(4) {
-  -webkit-animation-delay: 0.4s;
-          animation-delay: 0.4s;
-}
-
-.lettre:nth-child(5) {
-  -webkit-animation-delay: 0.5s;
-          animation-delay: 0.5s;
-}
-
-.lettre:nth-child(6) {
-  -webkit-animation-delay: 0.6s;
-          animation-delay: 0.6s;
-}
-
-.lettre:nth-child(7) {
-  -webkit-animation-delay: 0.7s;
-          animation-delay: 0.7s;
-}
-
-.lettre:nth-child(8) {
-  -webkit-animation-delay: 0.8s;
-          animation-delay: 0.8s;
-}
-
-.lettre:nth-child(9) {
-  -webkit-animation-delay: 0.9s;
-          animation-delay: 0.9s;
-}
-
-.lettre:nth-child(10) {
-  -webkit-animation-delay: 1s;
-          animation-delay: 1s;
-}
-
 #le_gout {
   background-image: url(image/palette.jpg);
   background-size: cover;
@@ -694,13 +679,14 @@ header .header_return {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 70%;
+  width: 100%;
   height: auto;
 }
 
 .menu .prix {
   width: 10%;
   height: auto;
+  margin-left: 2%;
   font-weight: bold;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -773,48 +759,54 @@ header .header_return {
           transform: scaleX(1);
   -webkit-transform-origin: right;
           transform-origin: right;
-  -webkit-transition: -webkit-transform 1000ms ease-in-out;
-  transition: -webkit-transform 1000ms ease-in-out;
-  transition: transform 1000ms ease-in-out;
-  transition: transform 1000ms ease-in-out, -webkit-transform 1000ms ease-in-out;
+  -webkit-transition: -webkit-transform 500ms linear;
+  transition: -webkit-transform 500ms linear;
+  transition: transform 500ms linear;
+  transition: transform 500ms linear, -webkit-transform 500ms linear;
 }
 
 .entree .entree_1:hover .fa-check-circle, .entree .entree_2:hover .fa-check-circle, .entree .entree_3:hover .fa-check-circle, .entree .entree_4:hover .fa-check-circle {
   -webkit-transform: rotate(360deg);
           transform: rotate(360deg);
-  -webkit-transition: -webkit-transform 1000ms ease-in-out;
-  transition: -webkit-transform 1000ms ease-in-out;
-  transition: transform 1000ms ease-in-out;
-  transition: transform 1000ms ease-in-out, -webkit-transform 1000ms ease-in-out;
+  -webkit-transition: -webkit-transform 500ms linear;
+  transition: -webkit-transform 500ms linear;
+  transition: transform 500ms linear;
+  transition: transform 500ms linear, -webkit-transform 500ms linear;
 }
 
 .entree .entree_1:hover .prix, .entree .entree_2:hover .prix, .entree .entree_3:hover .prix, .entree .entree_4:hover .prix {
-  -webkit-transform: translateX(-100%);
-          transform: translateX(-100%);
-  -webkit-transition: -webkit-transform 1000ms ease-in-out;
-  transition: -webkit-transform 1000ms ease-in-out;
-  transition: transform 1000ms ease-in-out;
-  transition: transform 1000ms ease-in-out, -webkit-transform 1000ms ease-in-out;
+  -webkit-transform: translateX(-10%);
+          transform: translateX(-10%);
+  -webkit-transition: -webkit-transform 500ms linear;
+  transition: -webkit-transform 500ms linear;
+  transition: transform 500ms linear;
+  transition: transform 500ms linear, -webkit-transform 500ms linear;
+}
+
+.entree .entree_1:hover .descrption, .entree .entree_2:hover .descrption, .entree .entree_3:hover .descrption, .entree .entree_4:hover .descrption {
+  width: 70%;
+  -webkit-transition: width 500ms linear;
+  transition: width 500ms linear;
 }
 
 .entree .entree_1 {
-  -webkit-animation: fondu 1000ms linear 1300ms 1 normal none;
-          animation: fondu 1000ms linear 1300ms 1 normal none;
+  -webkit-animation: fondu 1000ms linear 0ms 1 normal none;
+          animation: fondu 1000ms linear 0ms 1 normal none;
 }
 
 .entree .entree_2 {
-  -webkit-animation: fondu 1000ms linear 1500ms 1 normal none;
-          animation: fondu 1000ms linear 1500ms 1 normal none;
+  -webkit-animation: fondu 1000ms linear 300ms 1 normal none;
+          animation: fondu 1000ms linear 300ms 1 normal none;
 }
 
 .entree .entree_3 {
-  -webkit-animation: fondu 1000ms linear 1600ms 1 normal none;
-          animation: fondu 1000ms linear 1600ms 1 normal none;
+  -webkit-animation: fondu 1000ms linear 600ms 1 normal none;
+          animation: fondu 1000ms linear 600ms 1 normal none;
 }
 
 .entree .entree_4 {
-  -webkit-animation: fondu 1000ms linear 1800ms 1 normal none;
-          animation: fondu 1000ms linear 1800ms 1 normal none;
+  -webkit-animation: fondu 1000ms linear 900ms 1 normal none;
+          animation: fondu 1000ms linear 900ms 1 normal none;
 }
 
 .plat .plat_1, .plat .plat_2, .plat .plat_3 {
@@ -873,43 +865,49 @@ header .header_return {
           transform: scaleX(1);
   -webkit-transform-origin: right;
           transform-origin: right;
-  -webkit-transition: -webkit-transform 1000ms ease-in-out;
-  transition: -webkit-transform 1000ms ease-in-out;
-  transition: transform 1000ms ease-in-out;
-  transition: transform 1000ms ease-in-out, -webkit-transform 1000ms ease-in-out;
+  -webkit-transition: -webkit-transform 500ms linear;
+  transition: -webkit-transform 500ms linear;
+  transition: transform 500ms linear;
+  transition: transform 500ms linear, -webkit-transform 500ms linear;
 }
 
 .plat .plat_1:hover .fa-check-circle, .plat .plat_2:hover .fa-check-circle, .plat .plat_3:hover .fa-check-circle {
   -webkit-transform: rotate(360deg);
           transform: rotate(360deg);
-  -webkit-transition: -webkit-transform 1000ms ease-in-out;
-  transition: -webkit-transform 1000ms ease-in-out;
-  transition: transform 1000ms ease-in-out;
-  transition: transform 1000ms ease-in-out, -webkit-transform 1000ms ease-in-out;
+  -webkit-transition: -webkit-transform 500ms linear;
+  transition: -webkit-transform 500ms linear;
+  transition: transform 500ms linear;
+  transition: transform 500ms linear, -webkit-transform 500ms linear;
 }
 
 .plat .plat_1:hover .prix, .plat .plat_2:hover .prix, .plat .plat_3:hover .prix {
-  -webkit-transform: translateX(-100%);
-          transform: translateX(-100%);
-  -webkit-transition: -webkit-transform 1000ms ease-in-out;
-  transition: -webkit-transform 1000ms ease-in-out;
-  transition: transform 1000ms ease-in-out;
-  transition: transform 1000ms ease-in-out, -webkit-transform 1000ms ease-in-out;
+  -webkit-transform: translateX(-10%);
+          transform: translateX(-10%);
+  -webkit-transition: -webkit-transform 500ms linear;
+  transition: -webkit-transform 500ms linear;
+  transition: transform 500ms linear;
+  transition: transform 500ms linear, -webkit-transform 500ms linear;
+}
+
+.plat .plat_1:hover .descrption, .plat .plat_2:hover .descrption, .plat .plat_3:hover .descrption {
+  width: 70%;
+  -webkit-transition: width 500ms linear;
+  transition: width 500ms linear;
 }
 
 .plat .plat_1 {
-  -webkit-animation: fondu 1000ms linear 1300ms 1 normal none;
-          animation: fondu 1000ms linear 1300ms 1 normal none;
+  -webkit-animation: fondu 1000ms linear 0ms 1 normal none;
+          animation: fondu 1000ms linear 0ms 1 normal none;
 }
 
 .plat .plat_2 {
-  -webkit-animation: fondu 1000ms linear 1500ms 1 normal none;
-          animation: fondu 1000ms linear 1500ms 1 normal none;
+  -webkit-animation: fondu 1000ms linear 300ms 1 normal none;
+          animation: fondu 1000ms linear 300ms 1 normal none;
 }
 
 .plat .plat_3 {
-  -webkit-animation: fondu 1000ms linear 1600ms 1 normal none;
-          animation: fondu 1000ms linear 1600ms 1 normal none;
+  -webkit-animation: fondu 1000ms linear 600ms 1 normal none;
+          animation: fondu 1000ms linear 600ms 1 normal none;
 }
 
 .dessert .dessert_1, .dessert .dessert_2, .dessert .dessert_3 {
@@ -968,43 +966,49 @@ header .header_return {
           transform: scaleX(1);
   -webkit-transform-origin: right;
           transform-origin: right;
-  -webkit-transition: -webkit-transform 1000ms ease-in-out;
-  transition: -webkit-transform 1000ms ease-in-out;
-  transition: transform 1000ms ease-in-out;
-  transition: transform 1000ms ease-in-out, -webkit-transform 1000ms ease-in-out;
+  -webkit-transition: -webkit-transform 500ms linear;
+  transition: -webkit-transform 500ms linear;
+  transition: transform 500ms linear;
+  transition: transform 500ms linear, -webkit-transform 500ms linear;
 }
 
 .dessert .dessert_1:hover .fa-check-circle, .dessert .dessert_2:hover .fa-check-circle, .dessert .dessert_3:hover .fa-check-circle {
   -webkit-transform: rotate(360deg);
           transform: rotate(360deg);
-  -webkit-transition: -webkit-transform 1000ms ease-in-out;
-  transition: -webkit-transform 1000ms ease-in-out;
-  transition: transform 1000ms ease-in-out;
-  transition: transform 1000ms ease-in-out, -webkit-transform 1000ms ease-in-out;
+  -webkit-transition: -webkit-transform 500ms linear;
+  transition: -webkit-transform 500ms linear;
+  transition: transform 500ms linear;
+  transition: transform 500ms linear, -webkit-transform 500ms linear;
 }
 
 .dessert .dessert_1:hover .prix, .dessert .dessert_2:hover .prix, .dessert .dessert_3:hover .prix {
-  -webkit-transform: translateX(-100%);
-          transform: translateX(-100%);
-  -webkit-transition: -webkit-transform 1000ms ease-in-out;
-  transition: -webkit-transform 1000ms ease-in-out;
-  transition: transform 1000ms ease-in-out;
-  transition: transform 1000ms ease-in-out, -webkit-transform 1000ms ease-in-out;
+  -webkit-transform: translateX(-10%);
+          transform: translateX(-10%);
+  -webkit-transition: -webkit-transform 500ms linear;
+  transition: -webkit-transform 500ms linear;
+  transition: transform 500ms linear;
+  transition: transform 500ms linear, -webkit-transform 500ms linear;
+}
+
+.dessert .dessert_1:hover .descrption, .dessert .dessert_2:hover .descrption, .dessert .dessert_3:hover .descrption {
+  width: 70%;
+  -webkit-transition: width 500ms linear;
+  transition: width 500ms linear;
 }
 
 .dessert .dessert_1 {
-  -webkit-animation: fondu 1000ms linear 1300ms 1 normal none;
-          animation: fondu 1000ms linear 1300ms 1 normal none;
+  -webkit-animation: fondu 1000ms linear 0ms 1 normal none;
+          animation: fondu 1000ms linear 0ms 1 normal none;
 }
 
 .dessert .dessert_2 {
-  -webkit-animation: fondu 1000ms linear 1500ms 1 normal none;
-          animation: fondu 1000ms linear 1500ms 1 normal none;
+  -webkit-animation: fondu 1000ms linear 300ms 1 normal none;
+          animation: fondu 1000ms linear 300ms 1 normal none;
 }
 
 .dessert .dessert_3 {
-  -webkit-animation: fondu 1000ms linear 1600ms 1 normal none;
-          animation: fondu 1000ms linear 1600ms 1 normal none;
+  -webkit-animation: fondu 1000ms linear 600ms 1 normal none;
+          animation: fondu 1000ms linear 600ms 1 normal none;
 }
 
 .commande {
