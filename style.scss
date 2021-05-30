@@ -82,7 +82,7 @@ $septième:white;
             transition: transform 500ms linear;
         }
         & .descrption{
-            width:70%;
+            width:50vw;
             transition: width 500ms linear;
         }
 }
@@ -475,6 +475,8 @@ header{
    
 /*code commun index*/
 .bloc_index{
+    width: 100%;
+    height: auto;
     background-color: $quaternaire;
 }
 .header_index{
@@ -542,11 +544,11 @@ header{
     .descrption{
         display: flex;
         flex-direction: column;
-        width: 100%;
+        width: 60vw;
         height: auto;
     }
     .prix{
-        width: 10%;
+        width: 15%;
         height: auto;
         margin-left:2%;
         font-weight: bold;
@@ -818,8 +820,8 @@ footer{
     }
 }
 /*index*/
-.titre-restaurant{
-    font-size:170%
+.titre-restaurant h2{
+    font-size:40%
 }
 .menu{
     font-size: 150%;
@@ -913,8 +915,9 @@ footer{
             margin-bottom: 2%;
         }
     }
-    .titre-restaurant{
-                font-size: 180%;
+    .titre-restaurant h2{
+        
+                font-size: 110%;
     }
 }
 
@@ -985,6 +988,10 @@ footer{
             height: 33px;
         }
     }
+    .titre-restaurant h2{
+        
+        font-size: 100%;
+}
     footer{
         ul{
             display: flex;

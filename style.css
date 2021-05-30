@@ -617,6 +617,8 @@ header .header_return {
 
 /*code commun index*/
 .bloc_index {
+  width: 100%;
+  height: auto;
   background-color: #F2F2F2;
 }
 
@@ -715,12 +717,12 @@ header .header_return {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 100%;
+  width: 60vw;
   height: auto;
 }
 
 .menu .prix {
-  width: 10%;
+  width: 15%;
   height: auto;
   margin-left: 2%;
   font-weight: bold;
@@ -820,7 +822,7 @@ header .header_return {
 }
 
 .entree .entree_1:hover .descrption, .entree .entree_2:hover .descrption, .entree .entree_3:hover .descrption, .entree .entree_4:hover .descrption {
-  width: 70%;
+  width: 50vw;
   -webkit-transition: width 500ms linear;
   transition: width 500ms linear;
 }
@@ -926,7 +928,7 @@ header .header_return {
 }
 
 .plat .plat_1:hover .descrption, .plat .plat_2:hover .descrption, .plat .plat_3:hover .descrption {
-  width: 70%;
+  width: 50vw;
   -webkit-transition: width 500ms linear;
   transition: width 500ms linear;
 }
@@ -1027,7 +1029,7 @@ header .header_return {
 }
 
 .dessert .dessert_1:hover .descrption, .dessert .dessert_2:hover .descrption, .dessert .dessert_3:hover .descrption {
-  width: 70%;
+  width: 50vw;
   -webkit-transition: width 500ms linear;
   transition: width 500ms linear;
 }
@@ -1223,8 +1225,8 @@ footer a {
 }
 
 /*index*/
-.titre-restaurant {
-  font-size: 170%;
+.titre-restaurant h2 {
+  font-size: 40%;
 }
 
 .menu {
@@ -1307,8 +1309,8 @@ footer {
     margin-top: 2%;
     margin-bottom: 2%;
   }
-  .titre-restaurant {
-    font-size: 180%;
+  .titre-restaurant h2 {
+    font-size: 110%;
   }
 }
 
@@ -1378,6 +1380,9 @@ footer {
   }
   .section_restaurants p {
     height: 33px;
+  }
+  .titre-restaurant h2 {
+    font-size: 100%;
   }
   footer ul {
     display: -webkit-box;
