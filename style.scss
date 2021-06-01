@@ -12,44 +12,45 @@
 }
 @font-face {
     font-family: 'robotoregular';
-    src: url('Roboto-Regular-webfont.eot');
-    src: url('Roboto-Regular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('Roboto-Regular-webfont.woff2') format('woff2'),
-         url('Roboto-Regular-webfont.woff') format('woff'),
-         url('Roboto-Regular-webfont.ttf') format('truetype'),
-         url('Roboto-Regular-webfont.svg#robotoregular') format('svg');
+    src: url('police/roboto/Roboto-Regular-webfont.eot');
+    src: url('police/roboto/Roboto-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('police/roboto/Roboto-Regular-webfont.woff2') format('woff2'),
+         url('police/roboto/Roboto-Regular-webfont.woff') format('woff'),
+         url('police/roboto/Roboto-Regular-webfont.ttf') format('truetype'),
+         url('police/roboto/Roboto-Regular-webfont.svg#robotoregular') format('svg');
     font-weight: normal;
     font-style: normal;
+
 }
 
 $primaire: #9356DC;
 $secondaire: #FF79DA;
 $tertiaire: #99E2D0;
 $quaternaire:#F2F2F2;
-$cinquième:#DCDCDC;
-$sixième:#0F0D0A;
-$septième:white;
+$cinquieme:#DCDCDC;
+$sixieme:#0F0D0A;
+$septieme:white;
 
-@keyframes fondu {
-    from {
+@keyframes fondu{
+    0% {
         opacity:0;
     }
-    to {
+    100% {
         opacity:1;
     }
 }
 
 @mixin valeur_fondu1 {
-    animation: fondu 1000ms linear 0ms 1 normal none;
+    animation: fondu 500ms linear 0ms 1 normal none;
 }
 @mixin valeur_fondu2 {
-    animation: fondu 1000ms linear 300ms 1 normal none;
+    animation: fondu 500ms linear 250ms 1 normal none;
 }
 @mixin valeur_fondu3 {
-    animation: fondu 1000ms linear 600ms 1 normal none;
+    animation: fondu 500ms linear 500ms 1 normal none;
 }
 @mixin valeur_fondu4 {
-    animation: fondu 1000ms linear 900ms 1 normal none;
+    animation: fondu 500ms linear 750ms 1 normal none;
 }
 @mixin check{
     display: flex;
@@ -60,30 +61,30 @@ $septième:white;
     font-size: 110%;
     align-items: center;
     justify-content: center;
-    color: $septième;
+    color: $septieme;
     transform: scaleX(0);
     transform-origin: right;
     transition: transform 2s linear ease-in-out;
 }
 @mixin check_hover {
-    box-shadow: 6px 6px 6px darken($cinquième,10);
+    box-shadow: 6px 6px 6px darken($cinquieme,10);
     cursor: pointer;
         & .check{
             transform:scaleX(1);
             transform-origin: right;
-            transition: transform 500ms linear;
+            transition: transform 250ms linear;
         }
         & .fa-check-circle{
             transform: rotate(360deg);
-            transition: transform 500ms linear;
+            transition: transform 250ms linear;
         }
         & .prix{
             transform:translateX(-10%);
-            transition: transform 500ms linear;
+            transition: transform 250ms linear;
         }
         & .descrption{
             width:50vw;
-            transition: width 500ms linear;
+            transition: width 250ms linear;
         }
 }
 .loading{
@@ -95,11 +96,17 @@ $septième:white;
     bottom: 0;
     right: 0;
     left: 0;
-    background-color: $septième;
+    background-color: $septieme;
     border-radius: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
+    animation: loading_disparition 2s normal forwards ease-in;
+}
+@keyframes loading_disparition{
+    0% {transform: scale(1);}
+    99% { transform: scale(1);}
+    100% {transform: scale(0);}
 }
 .loading_spinner2{
     width: 50px;
@@ -115,7 +122,7 @@ $septième:white;
 }
  .loading_spinner{
 .lettre{
-    color: $cinquième;
+    color: $cinquieme;
     font-size: 300%;
     letter-spacing: 15px;
     animation: lettres 1.2s linear infinite;
@@ -128,7 +135,7 @@ $septième:white;
         text-shadow: 0 0 6px darken($tertiaire,20);
     }
     90%{
-        color:$cinquième;
+        color:$cinquieme;
     }
     100%{
         color: darken($tertiaire,20);
@@ -165,23 +172,19 @@ $septième:white;
 .lettre:nth-child(10){
     animation-delay:1s;
 }
-.loading {
-    transform: scale(0);
-    transition: transform 3s linear;
-}
 
 
 .bloc_page{
     width:100%;
     height:auto;
     margin: auto;
-    font-family: robotoregular;
-    color: $sixième;
+    font-family: robotoregular, Arial,sans-serif;
+    color: $sixieme;
     cursor: default;
     font-size: 1.14rem;
         a{
             text-decoration: none;
-            color: $sixième;
+            color: $sixieme;
         }
         li{
             display: flex;
@@ -211,11 +214,12 @@ $septième:white;
                         display: none;
                     }
                 }
-            }
+        }
+
         .coeur_plein:hover .fa-heart{
             transform: scale(1);
             transform-origin: bottom;
-            transition: transform 1000ms ease-in-out;
+            transition: transform 300ms ease-in-out;
             -webkit-background-clip: text;
             background-clip: text;
             background-image: linear-gradient(to top, $secondaire, $primaire);
@@ -238,7 +242,7 @@ header{
             padding: 2% 0 5% 0;
         }
         .header_return{
-            color: $sixième;
+            color: $sixieme;
             font-size: 200%;
             width: auto;
             height:100%; 
@@ -255,8 +259,8 @@ header{
             height: auto;
             display: flex;
             justify-content: center;
-            background-color: $cinquième;
-           border-top: 2px darken($cinquième,20) solid;
+            background-color: $cinquieme;
+           border-top: 2px darken($cinquieme,20) solid;
         }
         #map{
             margin-right:3%;
@@ -266,7 +270,7 @@ header{
             height: auto;
             display: flex;
             justify-content: center;
-            background-color: $cinquième;
+            background-color: $cinquieme;
             border:none;
         }
         h1{
@@ -294,10 +298,10 @@ header{
             cursor: pointer;
             color: $quaternaire;
             background: linear-gradient(to bottom right, $secondaire,$primaire);
-            box-shadow: 6px 6px 6px darken($cinquième,5);
+            box-shadow: 6px 6px 6px darken($cinquieme,5);
                 &:hover{
                     background: linear-gradient(to bottom right, lighten($secondaire,3), lighten($primaire,3));
-                    box-shadow: 6px 6px 6px darken($cinquième,10);
+                    box-shadow: 6px 6px 6px darken($cinquieme,10);
                 }
         }
 }
@@ -322,33 +326,40 @@ header{
         li{
             
             background-color: $quaternaire;
-            border-radius: 20px;
+            border-radius: 50%;
             margin: 3% 0 0 0;
             width: 80%;
+            height: 60px;
             display: flex;
             flex-wrap: nowrap;
             align-self: center;
-            box-shadow: 6px 6px 6px darken($cinquième,5);
+            box-shadow: 6px 6px 6px darken($cinquieme,5);
                 &:hover{
                     background-color: lighten($primaire,30);
-                    box-shadow: 6px 6px 6px darken($cinquième,10);
+                    box-shadow: 6px 6px 6px darken($cinquieme,10);
                     .fa-tablet-alt{
                         color: $primaire;
                     }
                     .fa-list-ul{
                         color: $primaire;
                     }
-                    .fa-list-ul{
+                    .fa-store{
                         color: $primaire;
                     }
                 }
         }
         .li_chiffre{
             margin-right: 4%;
-            padding:0.5% 1.7% 0.5% 1.7%;
-            border-radius: 100%; 
+            width: 32px;
+            height: 32px;
+            padding: auto;
+            border-radius: 50%;
+            box-sizing: border-box;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center; 
             background-color: $primaire;
-            color:$septième;
+            color:$septieme;
             position: relative;
             left: -2%;         
         }
@@ -393,9 +404,9 @@ header{
             display: flex;
             flex-direction: column;
             justify-content: flex-end;
-            box-shadow: 6px 6px 6px darken($cinquième,5);
+            box-shadow: 6px 6px 6px darken($cinquieme,5);
                 &:hover{
-                    box-shadow: 6px 6px 6px darken($cinquième,10);
+                    box-shadow: 6px 6px 6px darken($cinquieme,10);
                 }
         }
         .index2{
@@ -418,14 +429,15 @@ header{
             height: auto;
             margin-right: 1%;
             padding: 1%;
+            border-radius: 5px;
             display: flex;
             justify-content: center;
             align-self: flex-end;
             position: relative;
-            bottom: 55%;
+            bottom: 51%;
         }
         h3{
-            background-color: $septième;
+            background-color: $septieme;
             width: 100%;
             height: auto;
             margin:0;
@@ -436,7 +448,7 @@ header{
             width: 100%;
             height: auto;
             margin:0;
-            background-color: $septième;
+            background-color: $septieme;
             border-radius: 0 0 15px 15px;
             display: flex;
             justify-content: space-between;
@@ -480,7 +492,7 @@ header{
     background-color: $quaternaire;
 }
 .header_index{
-    background-color: $septième;
+    background-color: $septieme;
     display: flex;
     justify-content: space-between;
 }
@@ -510,8 +522,7 @@ header{
     font-size: 200%;
     h6{
         margin: 0;
-        position: relative;
-        right: -100000000rem;
+        color: $quaternaire;  
     }
     h2{
         box-sizing: border-box;
@@ -562,11 +573,11 @@ header{
         .entree_1, .entree_2, .entree_3, .entree_4{
             width: auto;
             height: auto;
-            background-color: $septième;
+            background-color: $septieme;
             border-radius: 20px;
             box-sizing: border-box;
-            margin: 2%;
-            box-shadow: 6px 6px 6px darken($cinquième,5);
+            margin: 10px;
+            box-shadow: 6px 6px 6px darken($cinquieme,5);
             display: flex;
             justify-content: flex-end;
             justify-content: space-between;
@@ -577,6 +588,7 @@ header{
                    @include check_hover;
                 }
         }
+    }
         .entree_1{
             @include valeur_fondu1;
         }
@@ -589,14 +601,13 @@ header{
         .entree_4{
             @include valeur_fondu4;
         }
-}
 .plat{
         .plat_1, .plat_2, .plat_3{
-            background-color: $septième;
+            background-color: $septieme;
             border-radius: 20px;
             box-sizing: border-box;
             margin: 2%;
-            box-shadow: 6px 6px 6px darken($cinquième,5);
+            box-shadow: 6px 6px 6px darken($cinquieme,5);
             display: flex;
             justify-content: flex-end;
             justify-content: space-between;
@@ -619,11 +630,11 @@ header{
 }
 .dessert{
         .dessert_1, .dessert_2, .dessert_3{
-            background-color: $septième;
+            background-color: $septieme;
             border-radius: 20px;
             box-sizing: border-box;
             margin: 2%;
-            box-shadow: 6px 6px 6px darken($cinquième,5);
+            box-shadow: 6px 6px 6px darken($cinquieme,5);
             display: flex;
             justify-content: flex-end;
             justify-content: space-between;
@@ -658,6 +669,7 @@ header{
             padding-bottom: 10%;
             .btn_commande{
                 max-width: 65vw;
+                font-size: 100%;
                 height: auto;
                 box-sizing: border-box;
                 padding:2%;
@@ -669,10 +681,10 @@ header{
                 cursor: pointer;
                 color: $quaternaire;
                 background: linear-gradient(to bottom right, $secondaire,$primaire);
-                box-shadow: 6px 6px 6px darken($cinquième,5);
+                box-shadow: 6px 6px 6px darken($cinquieme,5);
                     &:hover{
                         background: linear-gradient(to bottom right, lighten($secondaire,3), lighten($primaire,3));
-                        box-shadow: 6px 6px 6px darken($cinquième,10);
+                        box-shadow: 6px 6px 6px darken($cinquieme,10);
                     }
             }
         }
@@ -681,11 +693,11 @@ header{
 footer{
     width: calc (100%-6%);
     height: auto;
-    background-color: $sixième;
+    background-color: $sixieme;
     padding: 0.3% 3% 3% 3%;
         h2{
             font-family: shrikhandregular, Arial, sans-serif;
-            color: $septième;
+            color: $septieme;
         }
         ul{
             list-style-type: none;
@@ -694,9 +706,13 @@ footer{
             margin: 1%;
         }
         .puce_footer{
-            color:$septième;
+            color:$septieme;
+            .fa-utensils, .fa-handshake{
+                width: 27px;
+                height: auto;
+            }
                 &:hover {
-                    color: darken($septième, 10);
+                    color: darken($septieme, 10);
                 }
         }
 }
@@ -723,15 +739,21 @@ footer{
         .input_recherche{
             width: 40%;
         }
+        .btn{
+            font-size: 90%;
+        }
     }
     .section_fonctionnement{
         li{
             width: 100%;
+            font-size: 95%;
+            border-radius: 20px;
+            height: 60px;
         }
         .li_chiffre{
             margin-right: 2%;
-            padding:0.5% 1.7% 0.5% 1.7%;
-            border-radius: 100%;          
+            width: 22px;
+            height: 22px;          
         }
         .fa-tablet-alt{
             margin-right: 2%;
@@ -767,7 +789,7 @@ footer{
 }
 .commande{
     .btn_commande{
-        font-size: 100%;
+        font-size: 120%;
     }
 }
 footer{
@@ -776,6 +798,12 @@ footer{
     }
     a{
         font-size: 80%;
+    }
+    .puce_footer{
+        font-size: 60%;
+    .fa-utensils, .fa-handshake{
+        width: 22px;
+        }
     }
 }
 
@@ -796,10 +824,12 @@ footer{
         li{
             width: 90%;
             border-radius: 10px;
+            font-size: 90%;
         }
         .li_chiffre{
             margin-right: 5%;
-            padding: 0.1% 2% 0.1% 2%;
+            width: 28px;
+            height: 28px;
         }
         .fa-tablet-alt{
             margin-right: 5%;
@@ -824,9 +854,6 @@ footer{
     font-size:40%
 }
 .menu{
-    font-size: 150%;
-}
-.commander{
     font-size: 150%;
 }
 footer{
@@ -856,8 +883,9 @@ footer{
         }
     }
     .section_fonctionnement{
-        .li_chiffre{
-            padding:0.1% 1.4% 0.1% 1.4%;
+        li{
+            border-radius: 10px;
+            height: 60px;
         }
         .fa-tablet-alt{
             margin-right: 11%;
@@ -898,14 +926,18 @@ footer{
         }
     }
     .section_fonctionnement{
-        .li_chiffre{
-            padding:0.1% 1% 0.5% 1%;   
+        li{
+            border-radius: 20px;
+            height: 60px;
         }
     }
     .section_restaurants{
         .block_restaurants{
             display: flex;
             flex-wrap: wrap;
+                .nouveau{
+                    bottom: 56%;
+                }
         }
         .index2, .index3, .index4, .index5{
             width: 45%;
@@ -915,10 +947,13 @@ footer{
             margin-bottom: 2%;
         }
     }
-    .titre-restaurant h2{
+    .titre-restaurant{ 
+        height: 500px;
+            h2{
         
                 font-size: 110%;
     }
+}
 }
 
 
@@ -963,16 +998,18 @@ footer{
         }
         li{
             width: 30%;
-            height: auto;
-        }
-        .li_chiffre{
-            padding:0.5% 1.7% 0.5% 1.7%;
+            border-radius: 20px;
+            height: 60px;
+            font-size: 95%;
         }
     }
     .section_restaurants{
         .block_restaurants{
             display: flex;
             flex-wrap: wrap;
+            .nouveau{
+                bottom: 56%;
+            }
         }
         .index2, .index3, .index4, .index5{
             width: 45%;
@@ -988,10 +1025,12 @@ footer{
             height: 33px;
         }
     }
-    .titre-restaurant h2{
-        
+    .titre-restaurant{
+        height: 500px;
+            h2{
         font-size: 100%;
-}
+        }
+    }
     footer{
         ul{
             display: flex;

@@ -8,26 +8,26 @@
 
 @font-face {
   font-family: 'robotoregular';
-  src: url("Roboto-Regular-webfont.eot");
-  src: url("Roboto-Regular-webfont.eot?#iefix") format("embedded-opentype"), url("Roboto-Regular-webfont.woff2") format("woff2"), url("Roboto-Regular-webfont.woff") format("woff"), url("Roboto-Regular-webfont.ttf") format("truetype"), url("Roboto-Regular-webfont.svg#robotoregular") format("svg");
+  src: url("police/roboto/Roboto-Regular-webfont.eot");
+  src: url("police/roboto/Roboto-Regular-webfont.eot?#iefix") format("embedded-opentype"), url("police/roboto/Roboto-Regular-webfont.woff2") format("woff2"), url("police/roboto/Roboto-Regular-webfont.woff") format("woff"), url("police/roboto/Roboto-Regular-webfont.ttf") format("truetype"), url("police/roboto/Roboto-Regular-webfont.svg#robotoregular") format("svg");
   font-weight: normal;
   font-style: normal;
 }
 
 @-webkit-keyframes fondu {
-  from {
+  0% {
     opacity: 0;
   }
-  to {
+  100% {
     opacity: 1;
   }
 }
 
 @keyframes fondu {
-  from {
+  0% {
     opacity: 0;
   }
-  to {
+  100% {
     opacity: 1;
   }
 }
@@ -52,6 +52,38 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-animation: loading_disparition 2s normal forwards ease-in;
+          animation: loading_disparition 2s normal forwards ease-in;
+}
+
+@-webkit-keyframes loading_disparition {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  99% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+}
+
+@keyframes loading_disparition {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  99% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
 }
 
 .loading_spinner2 {
@@ -172,20 +204,11 @@
           animation-delay: 1s;
 }
 
-.loading {
-  -webkit-transform: scale(0);
-          transform: scale(0);
-  -webkit-transition: -webkit-transform 3s linear;
-  transition: -webkit-transform 3s linear;
-  transition: transform 3s linear;
-  transition: transform 3s linear, -webkit-transform 3s linear;
-}
-
 .bloc_page {
   width: 100%;
   height: auto;
   margin: auto;
-  font-family: robotoregular;
+  font-family: robotoregular, Arial,sans-serif;
   color: #0F0D0A;
   cursor: default;
   font-size: 1.14rem;
@@ -241,10 +264,10 @@
           transform: scale(1);
   -webkit-transform-origin: bottom;
           transform-origin: bottom;
-  -webkit-transition: -webkit-transform 1000ms ease-in-out;
-  transition: -webkit-transform 1000ms ease-in-out;
-  transition: transform 1000ms ease-in-out;
-  transition: transform 1000ms ease-in-out, -webkit-transform 1000ms ease-in-out;
+  -webkit-transition: -webkit-transform 300ms ease-in-out;
+  transition: -webkit-transform 300ms ease-in-out;
+  transition: transform 300ms ease-in-out;
+  transition: transform 300ms ease-in-out, -webkit-transform 300ms ease-in-out;
   -webkit-background-clip: text;
   background-clip: text;
   background-image: -webkit-gradient(linear, left bottom, left top, from(#FF79DA), to(#9356DC));
@@ -411,9 +434,10 @@ header .header_return {
 
 .section_fonctionnement li {
   background-color: #F2F2F2;
-  border-radius: 20px;
+  border-radius: 50%;
   margin: 3% 0 0 0;
   width: 80%;
+  height: 60px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -439,14 +463,27 @@ header .header_return {
   color: #9356DC;
 }
 
-.section_fonctionnement li:hover .fa-list-ul {
+.section_fonctionnement li:hover .fa-store {
   color: #9356DC;
 }
 
 .section_fonctionnement .li_chiffre {
   margin-right: 4%;
-  padding: 0.5% 1.7% 0.5% 1.7%;
-  border-radius: 100%;
+  width: 32px;
+  height: 32px;
+  padding: auto;
+  border-radius: 50%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   background-color: #9356DC;
   color: white;
   position: relative;
@@ -546,6 +583,7 @@ header .header_return {
   height: auto;
   margin-right: 1%;
   padding: 1%;
+  border-radius: 5px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -555,7 +593,7 @@ header .header_return {
   -ms-flex-item-align: end;
       align-self: flex-end;
   position: relative;
-  bottom: 55%;
+  bottom: 51%;
 }
 
 .section_restaurants h3 {
@@ -671,8 +709,7 @@ header .header_return {
 
 .menu h6 {
   margin: 0;
-  position: relative;
-  right: -100000000rem;
+  color: #F2F2F2;
 }
 
 .menu h2 {
@@ -746,7 +783,7 @@ header .header_return {
   border-radius: 20px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  margin: 2%;
+  margin: 10px;
   -webkit-box-shadow: 6px 6px 6px #cfcfcf;
           box-shadow: 6px 6px 6px #cfcfcf;
   display: -webkit-box;
@@ -797,54 +834,54 @@ header .header_return {
           transform: scaleX(1);
   -webkit-transform-origin: right;
           transform-origin: right;
-  -webkit-transition: -webkit-transform 500ms linear;
-  transition: -webkit-transform 500ms linear;
-  transition: transform 500ms linear;
-  transition: transform 500ms linear, -webkit-transform 500ms linear;
+  -webkit-transition: -webkit-transform 250ms linear;
+  transition: -webkit-transform 250ms linear;
+  transition: transform 250ms linear;
+  transition: transform 250ms linear, -webkit-transform 250ms linear;
 }
 
 .entree .entree_1:hover .fa-check-circle, .entree .entree_2:hover .fa-check-circle, .entree .entree_3:hover .fa-check-circle, .entree .entree_4:hover .fa-check-circle {
   -webkit-transform: rotate(360deg);
           transform: rotate(360deg);
-  -webkit-transition: -webkit-transform 500ms linear;
-  transition: -webkit-transform 500ms linear;
-  transition: transform 500ms linear;
-  transition: transform 500ms linear, -webkit-transform 500ms linear;
+  -webkit-transition: -webkit-transform 250ms linear;
+  transition: -webkit-transform 250ms linear;
+  transition: transform 250ms linear;
+  transition: transform 250ms linear, -webkit-transform 250ms linear;
 }
 
 .entree .entree_1:hover .prix, .entree .entree_2:hover .prix, .entree .entree_3:hover .prix, .entree .entree_4:hover .prix {
   -webkit-transform: translateX(-10%);
           transform: translateX(-10%);
-  -webkit-transition: -webkit-transform 500ms linear;
-  transition: -webkit-transform 500ms linear;
-  transition: transform 500ms linear;
-  transition: transform 500ms linear, -webkit-transform 500ms linear;
+  -webkit-transition: -webkit-transform 250ms linear;
+  transition: -webkit-transform 250ms linear;
+  transition: transform 250ms linear;
+  transition: transform 250ms linear, -webkit-transform 250ms linear;
 }
 
 .entree .entree_1:hover .descrption, .entree .entree_2:hover .descrption, .entree .entree_3:hover .descrption, .entree .entree_4:hover .descrption {
   width: 50vw;
-  -webkit-transition: width 500ms linear;
-  transition: width 500ms linear;
+  -webkit-transition: width 250ms linear;
+  transition: width 250ms linear;
 }
 
-.entree .entree_1 {
-  -webkit-animation: fondu 1000ms linear 0ms 1 normal none;
-          animation: fondu 1000ms linear 0ms 1 normal none;
+.entree_1 {
+  -webkit-animation: fondu 500ms linear 0ms 1 normal none;
+          animation: fondu 500ms linear 0ms 1 normal none;
 }
 
-.entree .entree_2 {
-  -webkit-animation: fondu 1000ms linear 300ms 1 normal none;
-          animation: fondu 1000ms linear 300ms 1 normal none;
+.entree_2 {
+  -webkit-animation: fondu 500ms linear 250ms 1 normal none;
+          animation: fondu 500ms linear 250ms 1 normal none;
 }
 
-.entree .entree_3 {
-  -webkit-animation: fondu 1000ms linear 600ms 1 normal none;
-          animation: fondu 1000ms linear 600ms 1 normal none;
+.entree_3 {
+  -webkit-animation: fondu 500ms linear 500ms 1 normal none;
+          animation: fondu 500ms linear 500ms 1 normal none;
 }
 
-.entree .entree_4 {
-  -webkit-animation: fondu 1000ms linear 900ms 1 normal none;
-          animation: fondu 1000ms linear 900ms 1 normal none;
+.entree_4 {
+  -webkit-animation: fondu 500ms linear 750ms 1 normal none;
+          animation: fondu 500ms linear 750ms 1 normal none;
 }
 
 .plat .plat_1, .plat .plat_2, .plat .plat_3 {
@@ -903,49 +940,49 @@ header .header_return {
           transform: scaleX(1);
   -webkit-transform-origin: right;
           transform-origin: right;
-  -webkit-transition: -webkit-transform 500ms linear;
-  transition: -webkit-transform 500ms linear;
-  transition: transform 500ms linear;
-  transition: transform 500ms linear, -webkit-transform 500ms linear;
+  -webkit-transition: -webkit-transform 250ms linear;
+  transition: -webkit-transform 250ms linear;
+  transition: transform 250ms linear;
+  transition: transform 250ms linear, -webkit-transform 250ms linear;
 }
 
 .plat .plat_1:hover .fa-check-circle, .plat .plat_2:hover .fa-check-circle, .plat .plat_3:hover .fa-check-circle {
   -webkit-transform: rotate(360deg);
           transform: rotate(360deg);
-  -webkit-transition: -webkit-transform 500ms linear;
-  transition: -webkit-transform 500ms linear;
-  transition: transform 500ms linear;
-  transition: transform 500ms linear, -webkit-transform 500ms linear;
+  -webkit-transition: -webkit-transform 250ms linear;
+  transition: -webkit-transform 250ms linear;
+  transition: transform 250ms linear;
+  transition: transform 250ms linear, -webkit-transform 250ms linear;
 }
 
 .plat .plat_1:hover .prix, .plat .plat_2:hover .prix, .plat .plat_3:hover .prix {
   -webkit-transform: translateX(-10%);
           transform: translateX(-10%);
-  -webkit-transition: -webkit-transform 500ms linear;
-  transition: -webkit-transform 500ms linear;
-  transition: transform 500ms linear;
-  transition: transform 500ms linear, -webkit-transform 500ms linear;
+  -webkit-transition: -webkit-transform 250ms linear;
+  transition: -webkit-transform 250ms linear;
+  transition: transform 250ms linear;
+  transition: transform 250ms linear, -webkit-transform 250ms linear;
 }
 
 .plat .plat_1:hover .descrption, .plat .plat_2:hover .descrption, .plat .plat_3:hover .descrption {
   width: 50vw;
-  -webkit-transition: width 500ms linear;
-  transition: width 500ms linear;
+  -webkit-transition: width 250ms linear;
+  transition: width 250ms linear;
 }
 
 .plat .plat_1 {
-  -webkit-animation: fondu 1000ms linear 0ms 1 normal none;
-          animation: fondu 1000ms linear 0ms 1 normal none;
+  -webkit-animation: fondu 500ms linear 0ms 1 normal none;
+          animation: fondu 500ms linear 0ms 1 normal none;
 }
 
 .plat .plat_2 {
-  -webkit-animation: fondu 1000ms linear 300ms 1 normal none;
-          animation: fondu 1000ms linear 300ms 1 normal none;
+  -webkit-animation: fondu 500ms linear 250ms 1 normal none;
+          animation: fondu 500ms linear 250ms 1 normal none;
 }
 
 .plat .plat_3 {
-  -webkit-animation: fondu 1000ms linear 600ms 1 normal none;
-          animation: fondu 1000ms linear 600ms 1 normal none;
+  -webkit-animation: fondu 500ms linear 500ms 1 normal none;
+          animation: fondu 500ms linear 500ms 1 normal none;
 }
 
 .dessert .dessert_1, .dessert .dessert_2, .dessert .dessert_3 {
@@ -1004,49 +1041,49 @@ header .header_return {
           transform: scaleX(1);
   -webkit-transform-origin: right;
           transform-origin: right;
-  -webkit-transition: -webkit-transform 500ms linear;
-  transition: -webkit-transform 500ms linear;
-  transition: transform 500ms linear;
-  transition: transform 500ms linear, -webkit-transform 500ms linear;
+  -webkit-transition: -webkit-transform 250ms linear;
+  transition: -webkit-transform 250ms linear;
+  transition: transform 250ms linear;
+  transition: transform 250ms linear, -webkit-transform 250ms linear;
 }
 
 .dessert .dessert_1:hover .fa-check-circle, .dessert .dessert_2:hover .fa-check-circle, .dessert .dessert_3:hover .fa-check-circle {
   -webkit-transform: rotate(360deg);
           transform: rotate(360deg);
-  -webkit-transition: -webkit-transform 500ms linear;
-  transition: -webkit-transform 500ms linear;
-  transition: transform 500ms linear;
-  transition: transform 500ms linear, -webkit-transform 500ms linear;
+  -webkit-transition: -webkit-transform 250ms linear;
+  transition: -webkit-transform 250ms linear;
+  transition: transform 250ms linear;
+  transition: transform 250ms linear, -webkit-transform 250ms linear;
 }
 
 .dessert .dessert_1:hover .prix, .dessert .dessert_2:hover .prix, .dessert .dessert_3:hover .prix {
   -webkit-transform: translateX(-10%);
           transform: translateX(-10%);
-  -webkit-transition: -webkit-transform 500ms linear;
-  transition: -webkit-transform 500ms linear;
-  transition: transform 500ms linear;
-  transition: transform 500ms linear, -webkit-transform 500ms linear;
+  -webkit-transition: -webkit-transform 250ms linear;
+  transition: -webkit-transform 250ms linear;
+  transition: transform 250ms linear;
+  transition: transform 250ms linear, -webkit-transform 250ms linear;
 }
 
 .dessert .dessert_1:hover .descrption, .dessert .dessert_2:hover .descrption, .dessert .dessert_3:hover .descrption {
   width: 50vw;
-  -webkit-transition: width 500ms linear;
-  transition: width 500ms linear;
+  -webkit-transition: width 250ms linear;
+  transition: width 250ms linear;
 }
 
 .dessert .dessert_1 {
-  -webkit-animation: fondu 1000ms linear 0ms 1 normal none;
-          animation: fondu 1000ms linear 0ms 1 normal none;
+  -webkit-animation: fondu 500ms linear 0ms 1 normal none;
+          animation: fondu 500ms linear 0ms 1 normal none;
 }
 
 .dessert .dessert_2 {
-  -webkit-animation: fondu 1000ms linear 300ms 1 normal none;
-          animation: fondu 1000ms linear 300ms 1 normal none;
+  -webkit-animation: fondu 500ms linear 250ms 1 normal none;
+          animation: fondu 500ms linear 250ms 1 normal none;
 }
 
 .dessert .dessert_3 {
-  -webkit-animation: fondu 1000ms linear 600ms 1 normal none;
-          animation: fondu 1000ms linear 600ms 1 normal none;
+  -webkit-animation: fondu 500ms linear 500ms 1 normal none;
+          animation: fondu 500ms linear 500ms 1 normal none;
 }
 
 .commande {
@@ -1069,6 +1106,7 @@ header .header_return {
 
 .commande .commander .btn_commande {
   max-width: 65vw;
+  font-size: 100%;
   height: auto;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -1122,6 +1160,11 @@ footer .puce_footer {
   color: white;
 }
 
+footer .puce_footer .fa-utensils, footer .puce_footer .fa-handshake {
+  width: 27px;
+  height: auto;
+}
+
 footer .puce_footer:hover {
   color: #e6e6e6;
 }
@@ -1142,13 +1185,19 @@ footer .puce_footer:hover {
   .section_presentation .input_recherche {
     width: 40%;
   }
+  .section_presentation .btn {
+    font-size: 90%;
+  }
   .section_fonctionnement li {
     width: 100%;
+    font-size: 95%;
+    border-radius: 20px;
+    height: 60px;
   }
   .section_fonctionnement .li_chiffre {
     margin-right: 2%;
-    padding: 0.5% 1.7% 0.5% 1.7%;
-    border-radius: 100%;
+    width: 22px;
+    height: 22px;
   }
   .section_fonctionnement .fa-tablet-alt {
     margin-right: 2%;
@@ -1183,7 +1232,7 @@ footer .puce_footer:hover {
 }
 
 .commande .btn_commande {
-  font-size: 100%;
+  font-size: 120%;
 }
 
 footer h2 {
@@ -1192,6 +1241,14 @@ footer h2 {
 
 footer a {
   font-size: 80%;
+}
+
+footer .puce_footer {
+  font-size: 60%;
+}
+
+footer .puce_footer .fa-utensils, footer .puce_footer .fa-handshake {
+  width: 22px;
 }
 
 /*S format mobile*/
@@ -1205,10 +1262,12 @@ footer a {
   .section_fonctionnement li {
     width: 90%;
     border-radius: 10px;
+    font-size: 90%;
   }
   .section_fonctionnement .li_chiffre {
     margin-right: 5%;
-    padding: 0.1% 2% 0.1% 2%;
+    width: 28px;
+    height: 28px;
   }
   .section_fonctionnement .fa-tablet-alt {
     margin-right: 5%;
@@ -1233,10 +1292,6 @@ footer a {
   font-size: 150%;
 }
 
-.commander {
-  font-size: 150%;
-}
-
 footer {
   font-size: 150%;
 }
@@ -1258,8 +1313,9 @@ footer {
   .section_presentation .input_recherche {
     width: 30%;
   }
-  .section_fonctionnement .li_chiffre {
-    padding: 0.1% 1.4% 0.1% 1.4%;
+  .section_fonctionnement li {
+    border-radius: 10px;
+    height: 60px;
   }
   .section_fonctionnement .fa-tablet-alt {
     margin-right: 11%;
@@ -1292,8 +1348,9 @@ footer {
   .section_presentation .btn {
     width: 35%;
   }
-  .section_fonctionnement .li_chiffre {
-    padding: 0.1% 1% 0.5% 1%;
+  .section_fonctionnement li {
+    border-radius: 20px;
+    height: 60px;
   }
   .section_restaurants .block_restaurants {
     display: -webkit-box;
@@ -1302,12 +1359,18 @@ footer {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
+  .section_restaurants .block_restaurants .nouveau {
+    bottom: 56%;
+  }
   .section_restaurants .index2, .section_restaurants .index3, .section_restaurants .index4, .section_restaurants .index5 {
     width: 45%;
     height: 300px;
     margin: auto;
     margin-top: 2%;
     margin-bottom: 2%;
+  }
+  .titre-restaurant {
+    height: 500px;
   }
   .titre-restaurant h2 {
     font-size: 110%;
@@ -1356,10 +1419,9 @@ footer {
   }
   .section_fonctionnement li {
     width: 30%;
-    height: auto;
-  }
-  .section_fonctionnement .li_chiffre {
-    padding: 0.5% 1.7% 0.5% 1.7%;
+    border-radius: 20px;
+    height: 60px;
+    font-size: 95%;
   }
   .section_restaurants .block_restaurants {
     display: -webkit-box;
@@ -1367,6 +1429,9 @@ footer {
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+  }
+  .section_restaurants .block_restaurants .nouveau {
+    bottom: 56%;
   }
   .section_restaurants .index2, .section_restaurants .index3, .section_restaurants .index4, .section_restaurants .index5 {
     width: 45%;
@@ -1380,6 +1445,9 @@ footer {
   }
   .section_restaurants p {
     height: 33px;
+  }
+  .titre-restaurant {
+    height: 500px;
   }
   .titre-restaurant h2 {
     font-size: 100%;
