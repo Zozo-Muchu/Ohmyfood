@@ -221,6 +221,7 @@ $septieme:white;
             transition: transform 300ms ease-in-out;
             background-clip: text;
             -webkit-background-clip: text;
+            background-clip: text;
             background-image: linear-gradient(to top, $secondaire, $primaire);
                         }
 }
