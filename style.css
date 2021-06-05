@@ -208,7 +208,7 @@
   width: 100%;
   height: auto;
   margin: auto;
-  font-family: robotoregular, Arial,sans-serif;
+  font-family: "robotoregular", Arial,sans-serif;
   color: #0F0D0A;
   cursor: default;
   font-size: 1.14rem;
@@ -268,8 +268,8 @@
   transition: -webkit-transform 300ms ease-in-out;
   transition: transform 300ms ease-in-out;
   transition: transform 300ms ease-in-out, -webkit-transform 300ms ease-in-out;
-  -webkit-background-clip: text;
   background-clip: text;
+  -webkit-background-clip: text;
   background-image: -webkit-gradient(linear, left bottom, left top, from(#FF79DA), to(#9356DC));
   background-image: linear-gradient(to top, #FF79DA, #9356DC);
 }
@@ -397,7 +397,7 @@ header .header_return {
 }
 
 .section_fonctionnement {
-  width: calc 94%;
+  width: calc(100% - 6%);
   height: auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -410,7 +410,7 @@ header .header_return {
 }
 
 .section_fonctionnement h2 {
-  width: calc(100%-10%);
+  width: calc(100% - 10%);
   height: auto;
   margin: 5%;
   display: -webkit-box;
@@ -471,7 +471,6 @@ header .header_return {
   margin-right: 4%;
   width: 32px;
   height: 32px;
-  padding: auto;
   border-radius: 50%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -516,7 +515,7 @@ header .header_return {
 }
 
 .section_restaurants h2 {
-  width: calc(100%-10%);
+  width: calc(100% - 10%);
   height: auto;
   margin: 5%;
   display: -webkit-box;
@@ -817,10 +816,6 @@ header .header_return {
           transform: scaleX(0);
   -webkit-transform-origin: right;
           transform-origin: right;
-  -webkit-transition: -webkit-transform 2s linear ease-in-out;
-  transition: -webkit-transform 2s linear ease-in-out;
-  transition: transform 2s linear ease-in-out;
-  transition: transform 2s linear ease-in-out, -webkit-transform 2s linear ease-in-out;
 }
 
 .entree .entree_1:hover, .entree .entree_2:hover, .entree .entree_3:hover, .entree .entree_4:hover {
@@ -923,10 +918,6 @@ header .header_return {
           transform: scaleX(0);
   -webkit-transform-origin: right;
           transform-origin: right;
-  -webkit-transition: -webkit-transform 2s linear ease-in-out;
-  transition: -webkit-transform 2s linear ease-in-out;
-  transition: transform 2s linear ease-in-out;
-  transition: transform 2s linear ease-in-out, -webkit-transform 2s linear ease-in-out;
 }
 
 .plat .plat_1:hover, .plat .plat_2:hover, .plat .plat_3:hover {
@@ -1024,10 +1015,6 @@ header .header_return {
           transform: scaleX(0);
   -webkit-transform-origin: right;
           transform-origin: right;
-  -webkit-transition: -webkit-transform 2s linear ease-in-out;
-  transition: -webkit-transform 2s linear ease-in-out;
-  transition: transform 2s linear ease-in-out;
-  transition: transform 2s linear ease-in-out, -webkit-transform 2s linear ease-in-out;
 }
 
 .dessert .dessert_1:hover, .dessert .dessert_2:hover, .dessert .dessert_3:hover {
@@ -1137,7 +1124,7 @@ header .header_return {
 
 /*code commun*/
 footer {
-  width: calc 94%;
+  width: calc(100% - 6%);
   height: auto;
   background-color: #0F0D0A;
   padding: 0.3% 3% 3% 3%;

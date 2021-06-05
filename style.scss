@@ -64,7 +64,6 @@ $septieme:white;
     color: $septieme;
     transform: scaleX(0);
     transform-origin: right;
-    transition: transform 2s linear ease-in-out;
 }
 @mixin check_hover {
     box-shadow: 6px 6px 6px darken($cinquieme,10);
@@ -220,8 +219,8 @@ $septieme:white;
             transform: scale(1);
             transform-origin: bottom;
             transition: transform 300ms ease-in-out;
-            -webkit-background-clip: text;
             background-clip: text;
+            -webkit-background-clip: text;
             background-image: linear-gradient(to top, $secondaire, $primaire);
                         }
 }
@@ -306,13 +305,13 @@ header{
         }
 }
 .section_fonctionnement{
-    width: calc (100%-6%);
+    width: calc(100% - 6%);
     height: auto;
     display: flex;
     flex-direction: column;
     padding: 3%;
         h2{
-            width: calc(100%-10%);
+            width: calc(100% - 10%);
             height: auto;
             margin: 5%;
             display: flex;
@@ -352,7 +351,6 @@ header{
             margin-right: 4%;
             width: 32px;
             height: 32px;
-            padding: auto;
             border-radius: 50%;
             box-sizing: border-box;
             display: inline-flex;
@@ -384,7 +382,7 @@ header{
     background-color: $quaternaire;
 
         h2{
-            width: calc(100%-10%);
+            width: calc(100% - 10%);
             height: auto;
             margin: 5%;
             display: flex;
@@ -691,7 +689,7 @@ header{
 }
 /*code commun*/
 footer{
-    width: calc (100%-6%);
+    width: calc(100% - 6%);
     height: auto;
     background-color: $sixieme;
     padding: 0.3% 3% 3% 3%;
@@ -1039,5 +1037,4 @@ footer{
         }
     }
 }
-
 
