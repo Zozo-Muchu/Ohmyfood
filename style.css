@@ -268,7 +268,6 @@
   transition: -webkit-transform 300ms ease-in-out;
   transition: transform 300ms ease-in-out;
   transition: transform 300ms ease-in-out, -webkit-transform 300ms ease-in-out;
-  background-clip: text;
   -webkit-background-clip: text;
   background-image: -webkit-gradient(linear, left bottom, left top, from(#FF79DA), to(#9356DC));
   background-image: linear-gradient(to top, #FF79DA, #9356DC);
