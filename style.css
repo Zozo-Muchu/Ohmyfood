@@ -120,8 +120,8 @@
 
 .loading_spinner .lettre {
   color: #DCDCDC;
-  font-size: 300%;
-  letter-spacing: 15px;
+  font-size: 130%;
+  letter-spacing: 5%;
   -webkit-animation: lettres 1.2s linear infinite;
           animation: lettres 1.2s linear infinite;
 }
@@ -859,23 +859,23 @@ header .header_return {
 }
 
 .entree_1 {
-  -webkit-animation: fondu 500ms linear 0ms 1 normal none;
-          animation: fondu 500ms linear 0ms 1 normal none;
+  -webkit-animation: fondu 1s ease-in-out;
+          animation: fondu 1s ease-in-out;
 }
 
 .entree_2 {
-  -webkit-animation: fondu 500ms linear 250ms 1 normal none;
-          animation: fondu 500ms linear 250ms 1 normal none;
+  -webkit-animation: fondu 2s ease-in-out;
+          animation: fondu 2s ease-in-out;
 }
 
 .entree_3 {
-  -webkit-animation: fondu 500ms linear 500ms 1 normal none;
-          animation: fondu 500ms linear 500ms 1 normal none;
+  -webkit-animation: fondu 3s ease-in-out;
+          animation: fondu 3s ease-in-out;
 }
 
 .entree_4 {
-  -webkit-animation: fondu 500ms linear 750ms 1 normal none;
-          animation: fondu 500ms linear 750ms 1 normal none;
+  -webkit-animation: fondu 4s ease-in-out;
+          animation: fondu 4s ease-in-out;
 }
 
 .plat .plat_1, .plat .plat_2, .plat .plat_3 {
@@ -961,18 +961,18 @@ header .header_return {
 }
 
 .plat .plat_1 {
-  -webkit-animation: fondu 500ms linear 0ms 1 normal none;
-          animation: fondu 500ms linear 0ms 1 normal none;
+  -webkit-animation: fondu 1s ease-in-out;
+          animation: fondu 1s ease-in-out;
 }
 
 .plat .plat_2 {
-  -webkit-animation: fondu 500ms linear 250ms 1 normal none;
-          animation: fondu 500ms linear 250ms 1 normal none;
+  -webkit-animation: fondu 2s ease-in-out;
+          animation: fondu 2s ease-in-out;
 }
 
 .plat .plat_3 {
-  -webkit-animation: fondu 500ms linear 500ms 1 normal none;
-          animation: fondu 500ms linear 500ms 1 normal none;
+  -webkit-animation: fondu 3s ease-in-out;
+          animation: fondu 3s ease-in-out;
 }
 
 .dessert .dessert_1, .dessert .dessert_2, .dessert .dessert_3 {
@@ -1058,18 +1058,18 @@ header .header_return {
 }
 
 .dessert .dessert_1 {
-  -webkit-animation: fondu 500ms linear 0ms 1 normal none;
-          animation: fondu 500ms linear 0ms 1 normal none;
+  -webkit-animation: fondu 1s ease-in-out;
+          animation: fondu 1s ease-in-out;
 }
 
 .dessert .dessert_2 {
-  -webkit-animation: fondu 500ms linear 250ms 1 normal none;
-          animation: fondu 500ms linear 250ms 1 normal none;
+  -webkit-animation: fondu 2s ease-in-out;
+          animation: fondu 2s ease-in-out;
 }
 
 .dessert .dessert_3 {
-  -webkit-animation: fondu 500ms linear 500ms 1 normal none;
-          animation: fondu 500ms linear 500ms 1 normal none;
+  -webkit-animation: fondu 3s ease-in-out;
+          animation: fondu 3s ease-in-out;
 }
 
 .commande {

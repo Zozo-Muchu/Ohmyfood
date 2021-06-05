@@ -41,16 +41,16 @@ $septieme:white;
 }
 
 @mixin valeur_fondu1 {
-    animation: fondu 500ms linear 0ms 1 normal none;
+    animation: fondu 1s ease-in-out;
 }
 @mixin valeur_fondu2 {
-    animation: fondu 500ms linear 250ms 1 normal none;
+    animation: fondu 2s ease-in-out;
 }
 @mixin valeur_fondu3 {
-    animation: fondu 500ms linear 500ms 1 normal none;
+    animation: fondu 3s ease-in-out;
 }
 @mixin valeur_fondu4 {
-    animation: fondu 500ms linear 750ms 1 normal none;
+    animation: fondu 4s ease-in-out;
 }
 @mixin check{
     display: flex;
@@ -122,8 +122,8 @@ $septieme:white;
  .loading_spinner{
 .lettre{
     color: $cinquieme;
-    font-size: 300%;
-    letter-spacing: 15px;
+    font-size: 130%;
+    letter-spacing: 5%;
     animation: lettres 1.2s linear infinite;
 
 }
